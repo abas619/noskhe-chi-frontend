@@ -1,0 +1,36 @@
+$primary: #18601f;
+$secondary: #fdba4d;
+$accent: #9d9d9d;
+
+$primaryLight: #5e8f63;
+$secondaryLight: #fff8ed;
+
+$gradientPrimary: linear-gradient(0deg, $primary, $primaryLight);
+$gradientSecondary: linear-gradient(0deg, #fda61b, $secondary);
+
+$textDark: #3c3c3c;
+$textGrey: #636063;
+$textSilver: #9e9e9e;
+
+$success: #00bd79;
+$error: #ff3333;
+$info: #009cf2;
+$warning: #ffe16a;
+$disabled: #d8d8d8;
+$dis_button: #879ac1;
+
+$borderColor: #e7e6e7;
+
+$background: #f2f2f3;
+
+$bodyFont: Shabnam;
+$iconFontRegular: uicons-regular-rounded;
+$iconFontSolid: uicons-solid-rounded;
+$iconFontBold: uicons-bold-rounded;
+$iconFontBrands: uicons-brands;
+
+$boxshadow: 0px 4px 25px rgba(5, 5, 5, 0.08);
+$boxshadow2: rgba(0, 0, 0, 0.1) 0px 1.6px 3.6px 0px,
+  rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
+$boxshadow3: rgba(0, 0, 0, 0.1) 0px 3.2px 7.2px 0px,
+  rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;

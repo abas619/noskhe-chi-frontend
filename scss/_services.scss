@@ -1,0 +1,134 @@
+/*#region ----------------- Services */
+.services-section {
+  padding: 120px 0 180px 0;
+  position: relative;
+  .section-inner {
+    margin-top: 3rem;
+  }
+  .curve-img-bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -2px;
+    pointer-events: none;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      user-select: none;
+    }
+  }
+}
+
+.card-service {
+  padding: 12px 0;
+  user-select: none;
+  .card-inner {
+    background: white;
+    box-shadow: $boxshadow;
+    border-radius: 35px 35px 70px 35px;
+    padding: 30px 20px 40px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  .thumb {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    @include displayFlex(flex, center, center);
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    svg {
+      width: 100%;
+      fill: $secondary;
+    }
+  }
+  .info {
+    margin-top: 1rem;
+    text-align: center;
+    h3 {
+      font-size: 20px;
+      color: $textDark;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: $textGrey;
+      @include textTruncate(2);
+    }
+  }
+  &:hover {
+    .card-inner {
+      background: $gradientPrimary;
+    }
+    .thumb {
+      background-color: rgba($color: white, $alpha: 0.1);
+      svg {
+        fill: white;
+      }
+    }
+    .info {
+      h3 {
+        color: white;
+      }
+      p {
+        color: rgba($color: white, $alpha: 0.8);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .card-service {
+    .thumb {
+      width: 80px;
+      height: 80px;
+      padding: 15px;
+    }
+    .info {
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .card-service {
+    .card-inner {
+      padding: 20px 15px 30px 15px;
+      border-radius: 30px 30px 60px 30px;
+    }
+    .thumb {
+      width: 70px;
+      height: 70px;
+      padding: 12px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .card-service {
+    .card-inner {
+      padding: 15px 10px 20px 10px;
+      border-radius: 20px 20px 40px 20px;
+    }
+    .thumb {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+    }
+    .info {
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/*#endregion ----------------- Services */

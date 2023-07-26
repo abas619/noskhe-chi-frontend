@@ -1,0 +1,29 @@
+/*#region ----------------- Tabs */
+.nav-tabs {
+  border-bottom-width: 2px;
+  border-color: $borderColor;
+  .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid $borderColor;
+    color: $textSilver;
+    &.active {
+      border-bottom-color: $primary;
+      color: $primary;
+    }
+  }
+}
+.tab-content {
+  padding: 2rem 0 1rem 0;
+  .tab-inner {
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    padding: 1.5rem 0 0.5rem 0;
+  }
+}
+
+/*#endregion -------------- Tabs */

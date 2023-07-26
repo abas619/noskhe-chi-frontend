@@ -1,0 +1,108 @@
+/*#region ----------------- Modals */
+.modal {
+}
+.modal-content {
+  border-radius: 20px;
+  border: none;
+}
+.modal-header {
+  justify-content: center !important;
+  padding-top: 0;
+  border-bottom: 0;
+  .btn-close {
+    position: absolute;
+    left: 10px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: rgba($color: $primary, $alpha: 0.2);
+  }
+}
+.modal-title {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  text-align: center;
+  background: $gradientPrimary;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 0 0 10px 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 15px;
+    border-color: transparent transparent $primary transparent;
+  }
+}
+.modal-body {
+  .login-logo {
+    text-align: center;
+    width: 170px;
+    margin: 0 auto 2rem auto;
+    img {
+      width: 100%;
+    }
+  }
+  .title-mini {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .title-big {
+    color: $textDark;
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+    span {
+      color: $secondary;
+    }
+  }
+  .alert-msg {
+    text-align: center;
+    font-size: 14px;
+    margin: 1rem 0;
+    &.error {
+      color: $error;
+    }
+  }
+  .btns-action {
+    text-align: center;
+    .btn {
+      margin: 0 5px;
+    }
+  }
+  .link {
+    margin-top: 2rem;
+    text-align: center;
+    a {
+      color: $secondary;
+      margin: 0 5px;
+    }
+  }
+}
+.modal-footer {
+  justify-content: center;
+  border-top: none;
+}
+
+.time-countdown {
+  margin-bottom: 2rem;
+  @include displayFlex(flex, center, center);
+  flex-direction: column;
+  .time-show {
+    font-size: 18px;
+    text-align: center;
+  }
+  .btn-link {
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    color: $primary;
+    display: none;
+  }
+}
+
+/*#endregion -------------- Modals */
