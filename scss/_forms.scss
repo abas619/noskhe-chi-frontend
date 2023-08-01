@@ -135,6 +135,17 @@
       box-shadow: none !important;
     }
   }
+  &.static-label {
+    label {
+      position: unset;
+      top: unset;
+      right: unset;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
 }
 
 .textarea-group {

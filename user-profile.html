@@ -159,13 +159,13 @@
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active"><a href="user-dashboard.html" class="btn-collape"><i
+                                <li class="menu-item"><a href="user-dashboard.html" class="btn-collape"><i
                                             class="fi fi-rr-apps"></i>داشبورد</a></li>
                                 <li class="menu-item"><a href="user-recipes.html" class="btn-collape"><i
                                             class="fi fi-rr-clipboard-list-check"></i>لیست نسخه‌ها</a></li>
                                 <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
                                             class="fi fi-rr-marker"></i>آدرس‌ها</a></li>
-                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
+                                <li class="menu-item active"><a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>حساب کاربری</a></li>
                                 <li class="menu-item">
                                     <a href="user-tickets.html" class="btn-collape">
@@ -199,132 +199,90 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-apps"></i>
+                                    <i class="fi fi-rr-user"></i>
                                 </div>
-                                <h3>داشبورد</h3>
+                                <h3>حساب کاربری</h3>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="hello-msg">
-                                <h5>سلام! خوش آمدید</h5>
-                                <p>امیدواریم بتونیم با ارائه خدمات مناسب پاسخگوی نیاز شما باشیم</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ثبت نسخه -->
-                    <div class="register-recipe-group">
-                        <div class="card-register-recipe">
-                            <a href="#" class="card-inner">
-                                <div class="thumb">
-                                    <i class="fi fi-rr-clipboard-list-check"></i>
-                                </div>
-                                <div class="info">
-                                    <h5>ثبت نسخه</h5>
-                                    <p>جهت ثبت نسخه جدید کلیک کنید</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fi fi-rr-add"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-register-recipe">
-                            <a href="#" class="card-inner">
-                                <div class="thumb">
-                                    <i class="fi fi-rr-clipboard-list-check"></i>
-                                </div>
-                                <div class="info">
-                                    <h5>مشاهده آخرین نسخه</h5>
-                                    <p>جهت مشاهده آخرین نسخه کلیک کنید</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fi fi-rr-eye"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- وضعیت ها -->
-                    <div class="user-status">
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-3.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>نسخه های در انتظار تائید</h6>
-                                    <h3>10</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-2.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>نسخه های تکمیل شده</h6>
-                                    <h3>5</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-1.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>کدملی های ثبت شده</h6>
-                                    <h3>63</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- اطلاعیه‌ها -->
-                    <div class="notification-center">
-                        <nav>
-                            <div class="nav nav-tabs">
-                                <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#nav-custom-1">اطلاعیه‌ها</button>
-                                <button class="nav-link" data-bs-toggle="tab"
-                                    data-bs-target="#nav-custom-2">اعلان‌ها</button>
-                            </div>
-                        </nav>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="nav-custom-1">
-                                <div class="tab-inner">
-                                    <div class="card-notif">
-                                        <div class="card-inner">
-                                            <h6>عنوان</h6>
-                                            <div class="date"><i class="fi fi-rr-calendar"></i>21 اسفند 1402</div>
-                                            <div class="desc">
-                                                <p>تمام داروخانه‌های کشور اعتصاب کردند</p>
+                            <div class="form-content">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <input type="text" class="input" placeholder="نام" required>
+                                                <label>نام</label>
+                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <input type="text" class="input" placeholder="نام خانوادگی" required>
+                                                <label>نام خانوادگی</label>
+                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>جنسیت</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">زن</option>
+                                                    <option value="2">مرد</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <input type="text" class="input" placeholder="شماره همراه" required>
+                                                <label>شماره همراه</label>
+                                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>استان</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">قزوین</option>
+                                                    <option value="2">اهواز</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>شهر</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">الوند</option>
+                                                    <option value="2">تاکستان</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <input type="number" class="input" placeholder="کد ملی" required>
+                                                <label>کد ملی</label>
+                                                <div class="icon"><i class="fi fi-rr-subtitles"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <input type="email" class="input" placeholder="آدرس ایمیل" required>
+                                                <label>آدرس ایمیل</label>
+                                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
                                             <div class="btns-action">
-                                                <a href="#" class="btn btn-primary">ادامه</a>
+                                                <a href="#" class="btn btn-primary">تایید</a>
+                                                <a href="#" class="btn btn-primary-outline">انصراف</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-notif">
-                                        <div class="card-inner">
-                                            <h6>داروهای شما آمادست</h6>
-                                            <div class="date"><i class="fi fi-rr-calendar"></i>21 اسفند 1402</div>
-                                            <div class="desc">
-                                                <p>زود بیا داروهاتو بگیر تا خراب نشده</p>
-                                            </div>
-                                            <div class="btns-action">
-                                                <a href="#" class="btn btn-primary">ادامه</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-custom-2">
-                                Notification
+                                </form>
                             </div>
                         </div>
-
                     </div>
 
                 </div>

@@ -57,13 +57,13 @@ if (document.getElementById('btn-desktop-search') !== null) {
         btnClearClose.style.display = 'none'
     }
 
-    // document.addEventListener('click', function (event) {
-    //     var isClickInside = desktopSearch.contains(event.target);
-    //     if (isClickInside) { null }
-    //     else {
-    //         searchContent.style.display = "none";
-    //     }
-    // });
+    document.addEventListener('click', function (event) {
+        var isClickInside = desktopSearch.contains(event.target);
+        if (isClickInside) { null }
+        else {
+            searchResult.classList.remove('active')
+        }
+    });
 }
 
 if (document.getElementById('video-src-aboutus') != null) {

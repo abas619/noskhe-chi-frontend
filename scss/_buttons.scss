@@ -14,20 +14,29 @@
     box-shadow: none !important;
   }
   .fi {
-    position: relative;
-    top: 5px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 0;
+  }
+  &:disabled {
+    background-color: $background !important;
+    border: 1px solid $textSilver !important;
+    color: $textGrey;
   }
 }
 .icon-right {
+  padding-right: 3rem;
   .fi {
-    margin-left: 10px;
+    position: absolute;
+    right: 14px;
+    top: 11px;
   }
 }
 .icon-left {
+  padding-left: 3rem;
   .fi {
-    margin-right: 10px;
+    position: absolute;
+    left: 14px;
+    top: 11px;
   }
 }
 
@@ -56,6 +65,14 @@
   &:focus {
     background: $secondary;
     color: white;
+  }
+  &.color-red {
+    border-color: $error;
+    color: $error;
+    &:hover,
+    &:focus {
+      background-color: rgba($color: $error, $alpha: 0.1);
+    }
   }
 }
 .btn-secondary-outline {

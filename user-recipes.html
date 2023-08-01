@@ -159,9 +159,9 @@
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active"><a href="user-dashboard.html" class="btn-collape"><i
+                                <li class="menu-item"><a href="user-dashboard.html" class="btn-collape"><i
                                             class="fi fi-rr-apps"></i>داشبورد</a></li>
-                                <li class="menu-item"><a href="user-recipes.html" class="btn-collape"><i
+                                <li class="menu-item active"><a href="user-recipes.html" class="btn-collape"><i
                                             class="fi fi-rr-clipboard-list-check"></i>لیست نسخه‌ها</a></li>
                                 <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
                                             class="fi fi-rr-marker"></i>آدرس‌ها</a></li>
@@ -199,134 +199,214 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-apps"></i>
+                                    <i class="fi fi-rr-clipboard-list-check"></i>
                                 </div>
-                                <h3>داشبورد</h3>
+                                <h3>لیست نسخه‌ها</h3>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="hello-msg">
-                                <h5>سلام! خوش آمدید</h5>
-                                <p>امیدواریم بتونیم با ارائه خدمات مناسب پاسخگوی نیاز شما باشیم</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- ثبت نسخه -->
-                    <div class="register-recipe-group">
-                        <div class="card-register-recipe">
-                            <a href="#" class="card-inner">
+                            <!-- وقتی برای اولین بار میخواد نسخه ثبت کنه و خالیه -->
+                            <div class="empty-box">
                                 <div class="thumb">
-                                    <i class="fi fi-rr-clipboard-list-check"></i>
+                                    <img src="images/icons/icon-status-3.svg" alt="img">
                                 </div>
-                                <div class="info">
-                                    <h5>ثبت نسخه</h5>
-                                    <p>جهت ثبت نسخه جدید کلیک کنید</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fi fi-rr-add"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-register-recipe">
-                            <a href="#" class="card-inner">
-                                <div class="thumb">
-                                    <i class="fi fi-rr-clipboard-list-check"></i>
-                                </div>
-                                <div class="info">
-                                    <h5>مشاهده آخرین نسخه</h5>
-                                    <p>جهت مشاهده آخرین نسخه کلیک کنید</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fi fi-rr-eye"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                                <h6>شما نسخه ثبت نکرده اید</h6>
+                                <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                    data-bs-target="#modal-newRecipes"><i class="fi fi-rr-add"></i>نسخه جدید</button>
+                            </div>
 
-                    <!-- وضعیت ها -->
-                    <div class="user-status">
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-3.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>نسخه های در انتظار تائید</h6>
-                                    <h3>10</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-2.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>نسخه های تکمیل شده</h6>
-                                    <h3>5</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-status">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="images/icons/icon-status-1.svg" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h6>کدملی های ثبت شده</h6>
-                                    <h3>63</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- اطلاعیه‌ها -->
-                    <div class="notification-center">
-                        <nav>
-                            <div class="nav nav-tabs">
-                                <button class="nav-link active" data-bs-toggle="tab"
-                                    data-bs-target="#nav-custom-1">اطلاعیه‌ها</button>
-                                <button class="nav-link" data-bs-toggle="tab"
-                                    data-bs-target="#nav-custom-2">اعلان‌ها</button>
-                            </div>
-                        </nav>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="nav-custom-1">
-                                <div class="tab-inner">
-                                    <div class="card-notif">
-                                        <div class="card-inner">
-                                            <h6>عنوان</h6>
-                                            <div class="date"><i class="fi fi-rr-calendar"></i>21 اسفند 1402</div>
-                                            <div class="desc">
-                                                <p>تمام داروخانه‌های کشور اعتصاب کردند</p>
-                                            </div>
-                                            <div class="btns-action">
-                                                <a href="#" class="btn btn-primary">ادامه</a>
-                                            </div>
-                                        </div>
+                            <!-- بعد از اینکه نسخه ثبت کرد -->
+                            <div class="choose-code-meli mt-3">
+                                <div class="code-inner">
+                                    <div class="select-group">
+                                        <label>کد ملی</label>
+                                        <select class="form-select">
+                                            <option value="1">4310354996</option>
+                                            <option value="2">2948960032</option>
+                                        </select>
                                     </div>
-                                    <div class="card-notif">
-                                        <div class="card-inner">
-                                            <h6>داروهای شما آمادست</h6>
-                                            <div class="date"><i class="fi fi-rr-calendar"></i>21 اسفند 1402</div>
-                                            <div class="desc">
-                                                <p>زود بیا داروهاتو بگیر تا خراب نشده</p>
-                                            </div>
-                                            <div class="btns-action">
-                                                <a href="#" class="btn btn-primary">ادامه</a>
-                                            </div>
-                                        </div>
+                                    <div class="btns-action">
+                                        <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                            data-bs-target="#modal-newRecipes"><i class="fi fi-rr-add"></i>نسخه
+                                            جدید</button>
+                                        <button class="btn btn-secondary icon-right"><i
+                                                class="fi fi-rr-refresh"></i>بروزرسانی</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="nav-custom-2">
-                                Notification
-                            </div>
                         </div>
-
                     </div>
 
+                    <!-- لیست نسخه های ثبت شده -->
+                    <div class="recipes-list">
+                        <div class="filters">
+                            <h5>نسخه‌های ثبت شده</h5>
+                            <div class="sort">
+                                <div class="select-group static-label">
+                                    <label>مرتب سازی بر اساس</label>
+                                    <select class="form-select">
+                                        <option value="1">همه</option>
+                                        <option value="1">جدید ترین</option>
+                                        <option value="2">قدیمی ترین</option>
+                                        <option value="2">تایید شده</option>
+                                        <option value="2">رد شده</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-inner">
+                            <div class="card-recipe">
+                                <div class="card-inner">
+                                    <div class="number"><span>1</span></div>
+                                    <div class="info">
+                                        <ul>
+                                            <li>
+                                                <i class="fi fi-rr-user"></i>
+                                                نام و نام خانوادگی :
+                                                <span>سمیر دغاغله</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-calendar"></i>
+                                                تاریخ :
+                                                <span>21 اسفند 1402 - 12:39</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-subtitles"></i>
+                                                کد ملی :
+                                                <span>4312566548</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-barcode-read"></i>
+                                                کد رهگیری :
+                                                <span>888410032</span>
+                                            </li>
+                                            <li class="">
+                                                <i class="fi fi-rr-info"></i>
+                                                وضعیت :
+                                                <span class="waiting">در انتظار داروخانه</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btns-action">
+                                        <button class="btn btn-primary" disabled>در حال بررسی</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-recipe">
+                                <div class="card-inner">
+                                    <div class="number"><span>2</span></div>
+                                    <div class="info">
+                                        <ul>
+                                            <li>
+                                                <i class="fi fi-rr-user"></i>
+                                                نام و نام خانوادگی :
+                                                <span>سمیر دغاغله</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-calendar"></i>
+                                                تاریخ :
+                                                <span>21 اسفند 1402 - 12:39</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-subtitles"></i>
+                                                کد ملی :
+                                                <span>4312566548</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-barcode-read"></i>
+                                                کد رهگیری :
+                                                <span>888410032</span>
+                                            </li>
+                                            <li class="">
+                                                <i class="fi fi-rr-info"></i>
+                                                وضعیت :
+                                                <span class="payment">تایید داروخانه</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btns-action">
+                                        <button class="btn btn-primary">پرداخت</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-recipe">
+                                <div class="card-inner">
+                                    <div class="number"><span>3</span></div>
+                                    <div class="info">
+                                        <ul>
+                                            <li>
+                                                <i class="fi fi-rr-user"></i>
+                                                نام و نام خانوادگی :
+                                                <span>سمیر دغاغله</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-calendar"></i>
+                                                تاریخ :
+                                                <span>21 اسفند 1402 - 12:39</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-subtitles"></i>
+                                                کد ملی :
+                                                <span>4312566548</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-barcode-read"></i>
+                                                کد رهگیری :
+                                                <span>888410032</span>
+                                            </li>
+                                            <li class="">
+                                                <i class="fi fi-rr-info"></i>
+                                                وضعیت :
+                                                <span class="success">تکمیل شد</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btns-action">
+                                        <button class="btn btn-primary">مشاهده نسخه</button>
+                                        <button class="btn btn-secondary">جزییات</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-recipe">
+                                <div class="card-inner">
+                                    <div class="number"><span>4</span></div>
+                                    <div class="info">
+                                        <ul>
+                                            <li>
+                                                <i class="fi fi-rr-user"></i>
+                                                نام و نام خانوادگی :
+                                                <span>سمیر دغاغله</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-calendar"></i>
+                                                تاریخ :
+                                                <span>21 اسفند 1402 - 12:39</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-subtitles"></i>
+                                                کد ملی :
+                                                <span>4312566548</span>
+                                            </li>
+                                            <li>
+                                                <i class="fi fi-rr-barcode-read"></i>
+                                                کد رهگیری :
+                                                <span>888410032</span>
+                                            </li>
+                                            <li class="">
+                                                <i class="fi fi-rr-info"></i>
+                                                وضعیت :
+                                                <span class="error">رد شد</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btns-action">
+                                        <button class="btn btn-primary-outline color-red">جزییات</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -438,6 +518,44 @@
     </footer>
 
 
+    <!-- Modal New Recipes -->
+    <div class="modal fade" id="modal-newRecipes" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">نسخه جدید</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-content">
+                        <div class="inputgroup">
+                            <input type="number" class="input" placeholder="کد ملی" required>
+                            <label>کد ملی</label>
+                            <div class="icon"><i class="fi fi-rr-subtitles"></i></div>
+                        </div>
+                        <div class="inputgroup">
+                            <input type="number" class="input" placeholder="کد رهگیری" required>
+                            <label>کد رهگیری</label>
+                            <div class="icon"><i class="fi fi-rr-barcode-scan"></i></div>
+                        </div>
+                        <div class="select-group">
+                            <label>نوع بیمه</label>
+                            <select class="form-select">
+                                <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                <option value="1">بیمه زیبا رویان</option>
+                                <option value="2">بیمه هوای شرجی</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary">ثبت نسخه</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Login -->
     <div class="modal fade" id="modal-signin" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -510,7 +628,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- Scripts -->
