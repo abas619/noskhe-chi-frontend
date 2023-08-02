@@ -161,11 +161,11 @@
                             <ul class="menu-list">
                                 <li class="menu-item"><a href="user-dashboard.html" class="btn-collape"><i
                                             class="fi fi-rr-apps"></i>داشبورد</a></li>
-                                <li class="menu-item"><a href="user-recipes.html" class="btn-collape"><i
+                                <li class="menu-item active"><a href="user-recipes.html" class="btn-collape"><i
                                             class="fi fi-rr-clipboard-list-check"></i>لیست نسخه‌ها</a></li>
                                 <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
                                             class="fi fi-rr-marker"></i>آدرس‌ها</a></li>
-                                <li class="menu-item active"><a href="user-profile.html" class="btn-collape"><i
+                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>حساب کاربری</a></li>
                                 <li class="menu-item">
                                     <a href="user-tickets.html" class="btn-collape">
@@ -199,92 +199,113 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-user"></i>
+                                    <i class="fi fi-rr-pencil"></i>
                                 </div>
-                                <h3>حساب کاربری</h3>
+                                <h3>جزییات نسخه</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <a href="user-recipes.html" class="btn btn-primary icon-left">بازگشت<i
+                                        class="fi fi-rr-angle-small-left"></i></a>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="form-content">
-                                <form action="">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="نام" required>
-                                                <label>نام</label>
-                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="نام خانوادگی" required>
-                                                <label>نام خانوادگی</label>
-                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>جنسیت</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">زن</option>
-                                                    <option value="2">مرد</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="شماره همراه" required>
-                                                <label>شماره همراه</label>
-                                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>استان</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">قزوین</option>
-                                                    <option value="2">اهواز</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>شهر</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">الوند</option>
-                                                    <option value="2">تاکستان</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="number" class="input" placeholder="کد ملی" required>
-                                                <label>کد ملی</label>
-                                                <div class="icon"><i class="fi fi-rr-subtitles"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="email" class="input" placeholder="آدرس ایمیل" required>
-                                                <label>آدرس ایمیل</label>
-                                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="btns-action-main">
-                                                <a href="#" class="btn btn-primary">تایید</a>
-                                                <a href="#" class="btn btn-primary-outline">انصراف</a>
-                                            </div>
-                                        </div>
+
+                            <div class="factore-details">
+                                <ul>
+                                    <li><span>نام و نام خانوادگی :</span>وحید حسینی</li>
+                                    <li><span>کد ملی :</span>4320154865</li>
+                                    <li><span>نام پزشک :</span>امیر حسین پزشکی</li>
+                                    <li><span>نوع بیمه :</span>آزاد</li>
+                                    <li><span>مبلغ فاکتور :</span>480,000 تومان</li>
+                                    <li><span>کدرهگیری :</span>877954200</li>
+                                    <li><span>تاریخ ثبت :</span>21 اسفند 1402</li>
+                                    <li><span>زمان تحویل :</span>15:30</li>
+                                    <li><span>نوع تحویل :</span>حضوری</li>
+                                    <li><span>نام داروخانه :</span>امیرپزشکان پویا</li>
+                                    <li><span>آدرس داروخانه :</span>قزوین، خیام شمالی، نرسیده به جنوبی، کوچه بن بست، ته
+                                        کوچه</li>
+                                </ul>
+                            </div>
+
+                            <div class="drugs-details mt-4">
+                                <h6>لیست داروها</h6>
+                                <div class="table-responsive">
+                                    <table class="table my-table table-bordered table-striped align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">نام دارو</th>
+                                                <th scope="col">تعداد</th>
+                                                <th scope="col">توضیحات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <h6 class="fa">کوریزان ® ویتامین سی</h6>
+                                                    <h6 class="en">Corizan Vitamin C</h6>
+                                                </td>
+                                                <td>2 بسته</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    <h6 class="fa">قرص روکشدار كلداكس® آنفلونزا</h6>
+                                                    <h6 class="en">Coldax Flu</h6>
+                                                </td>
+                                                <td>3 بسته</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>
+                                                    <h6 class="fa">ادوالژین ای آر</h6>
+                                                    <h6 class="en">Advalgin 600 mg</h6>
+                                                </td>
+                                                <td>10 عدد</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>
+                                                    <h6 class="fa">قرص کدیمال® اکسترا - بلیستر</h6>
+                                                    <h6 class="en">Codimal®Extra F.C Tablet 20 Pcs</h6>
+                                                </td>
+                                                <td>1 بسته</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- یادداشت -->
+                            <div class="notepad">
+                                <h6>یادداشت شما</h6>
+                                <div class="notepad-inner">
+                                    <!-- وقتی یادداشتی ثبت نکرده -->
+                                    <div class="empty-notepad">
+                                        <i class="fi fi-rr-notebook"></i>
+                                        <h6>شما یادداشتی ثبت نکرده اید</h6>
                                     </div>
-                                </form>
+                                    <!-- وقتی یادداشت ثبت شد -->
+                                    <div class="text-notepad">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                            لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns-action-main">
+                                <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                    data-bs-target="#modal-notepad"><i class="fi fi-rr-add"></i>ثبت
+                                    یادداشت</button>
+                                <a href="#" class="btn btn-secondary icon-right"><i class="fi fi-rr-receipt"></i>مشاهده
+                                    فاکتور</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -395,81 +416,29 @@
         </div>
     </footer>
 
-
-    <!-- Modal Login -->
-    <div class="modal fade" id="modal-signin" tabindex="-1">
+    <!-- Modal Notepad -->
+    <div class="modal fade" id="modal-notepad" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">ورود | ثبت نام</h1>
+                    <h1 class="modal-title">یادداشت جدید</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pb-4">
-                    <!-- دریافت شماره همراه -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
+                <div class="modal-body">
+                    <form action="" class="form-content">
+                        <div class="textarea-group">
+                            <label>یادداشت شما</label>
+                            <textarea class="form-control" cols="30" rows="4"></textarea>
                         </div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="text" class="input" placeholder="شماره همراه" required>
-                                <label>شماره همراه</label>
-                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
-                            </div>
-                            <h6 class="title-mini">سلام‌! لطفا شماره همراه خود را وارد کنید</h6>
-                            <div class="btns-action">
-                                <button class="btn btn-secondary"
-                                    onclick="changeSignModalScreen(1),startTimer('1',3)">دریافت کد</button>
-                            </div>
-                        </form>
-                        <div class="link">
-                            ورود شما به معنای پذیرش شرایط نسخه چی و <a href="#">قوانین حریم‌خصوصی</a> است
-                        </div>
-                    </div>
-                    <!-- کد تایید -->
-                    <div class="login-section">
-                        <h6 class="title-mini">کد تایید را وارد کنید</h6>
-                        <div class="alert-msg error">حساب کاربری با شماره موبایل ۰۹۱214۹۸۶6۹ وجود ندارد</div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="number" class="input" placeholder="کد تایید" required>
-                                <label>کد تایید</label>
-                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
-                            </div>
-                            <div class="time-countdown">
-                                <h6 class="time-show" id="timer_1">00:00</h6>
-                                <button class="btn-link btn-resend-code_1" onclick="startTimer('1',4)">ارسال
-                                    مجدد</button>
-                            </div>
-                            <div class="btns-action">
-                                <button class="btn btn-primary" onclick="changeSignModalScreen(0)">تغییر شماره
-                                    همراه</button>
-                                <button class="btn btn-secondary" onclick="changeSignModalScreen(2)">ورود</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- نمایش پیام -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
-                        </div>
-                        <h4 class="title-big">به <span>نسخه‌چی</span> خوش آمدید!</h4>
-                        <div class="btns-action">
-                            <a href="#" class="btn btn-primary">ثبت نسخه جدید</a>
-                            <a href="#" class="btn btn-secondary">تکمیل مشخصات</a>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
-                <div class="modal-footer d-none">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                    <button type="button" class="btn btn-primary">دریافت کد ورود</button>
+                    <button type="button" class="btn btn-primary">ثبت یادداشت</button>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

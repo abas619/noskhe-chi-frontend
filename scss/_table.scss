@@ -1,0 +1,24 @@
+/*#region ----------------- Tables */
+.my-table {
+  thead {
+    tr th {
+      font-size: 14px;
+      color: $textGrey;
+    }
+  }
+  tbody {
+    h6 {
+      margin: 5px 0;
+      font-weight: 400;
+      &.fa {
+        font-size: 15px;
+        color: $textDark;
+      }
+      &.en {
+        color: $textGrey;
+        font-size: 14px;
+      }
+    }
+  }
+}
+/*#endregion -------------- Tables */

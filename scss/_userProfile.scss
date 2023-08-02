@@ -163,41 +163,24 @@
     }
     .buttons-group {
       .btn {
-        padding: 0.4rem 1rem 0.7rem 1rem;
-        background: silver;
+        background: $background;
+        border: 1px solid $borderColor;
         color: $textGrey;
-        &.icon-right {
-          .fi {
-            margin: 0 0 0 10px;
-          }
-        }
-        &.icon-left {
-          .fi {
-            margin: 0 10px 0 0;
-          }
-        }
+        min-width: unset;
         &:hover {
-          background-color: #ddd;
+          background: $background !important;
+          border-color: $primary !important;
+          color: $primary !important;
         }
-      }
-      .fi {
-        font-size: 20px;
-        line-height: 0 !important;
-        display: inline-block !important;
-        position: relative;
-        top: 6px;
-        color: $textGrey;
       }
     }
   }
   .main-body {
     padding: 20px 20px 40px 20px;
   }
-  .form-content {
-    .btns-action {
-      text-align: center;
-      margin-top: 2rem;
-    }
+  .btns-action-main {
+    text-align: center;
+    margin-top: 2rem;
   }
   .empty-box {
     padding: 60px 0;
@@ -448,8 +431,6 @@
 
 .choose-code-meli {
   .code-inner {
-    // display: grid;
-    // grid-template-columns: 400px auto;
     @include displayFlex(flex, center, space-between);
   }
   .select-group {
@@ -581,6 +562,110 @@
   }
 }
 
+.drugs-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-drug {
+  margin-bottom: 5px;
+  .card-inner {
+    border: 1px solid $borderColor;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 40px auto 300px;
+  }
+  .number {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: $textGrey;
+    padding: 8px;
+  }
+  .name {
+    padding: 8px 8px 8px 12px;
+    h6 {
+      &.fa {
+        font-size: 14px;
+        font-weight: 600;
+        color: $textDark;
+        margin-bottom: 5px;
+      }
+      &.en {
+        font-size: 13px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .info {
+    border-right: 1px solid $borderColor;
+    padding: 8px 12px 8px 8px;
+    p {
+      margin-bottom: 0;
+      color: $textGrey;
+      font-size: 14px;
+      font-weight: 400;
+      span {
+        color: $textDark;
+        font-weight: 600;
+      }
+    }
+  }
+  .box {
+    border-right: 1px solid $borderColor;
+    padding: 8px 12px 8px 8px;
+  }
+  &.more-details {
+    .card-inner {
+      grid-template-columns: 40px auto 100px 300px;
+    }
+  }
+}
+
+.factore-details {
+  ul {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    li {
+      flex: 1 0 50%;
+      width: 50%;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $textDark;
+      span {
+        color: $textGrey;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.notepad {
+  margin-top: 2rem;
+  .notepad-inner {
+    background-color: $background;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .empty-notepad {
+    text-align: center;
+    padding: 10px 0 0 0;
+    .fi {
+      font-size: 34px;
+      color: $textSilver;
+    }
+    h6 {
+      color: $textGrey;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
 @media (max-width: 1400px) {
   .user-dashboard-section {
     .products-list {
@@ -592,6 +677,7 @@
     }
   }
 }
+
 @media (max-width: 1199px) {
   .user-dashboard-section {
     margin: 120px 0 150px 0;
@@ -652,6 +738,7 @@
 
 @media (max-width: 992px) {
   .user-dashboard-section {
+    margin: 100px 0;
     .grid-layout {
       grid-template-columns: 100%;
     }
@@ -712,7 +799,30 @@
       }
     }
   }
+  .card-drug {
+    .card-inner {
+      grid-template-columns: 40px auto;
+      grid-template-areas: "number name" "recipes recipes";
+    }
+    .number {
+      grid-area: number;
+    }
+    .name {
+      grid-area: name;
+    }
+    .info {
+      grid-area: recipes;
+      border-right: none;
+      border-top: 1px solid $borderColor;
+      padding-right: 40px;
+      margin-top: 2px;
+      padding-top: 10px;
+      background-color: $background;
+      border-radius: 0 0 10px 10px;
+    }
+  }
 }
+
 @media (max-width: 768px) {
   .user-dashboard-section {
     .products-list {
@@ -727,11 +837,6 @@
       }
       .buttons-group .btn {
         font-size: 13px;
-        &.icon-left {
-          .fi {
-            margin: 0 5px 0 0;
-          }
-        }
       }
     }
   }
@@ -805,6 +910,7 @@
     }
   }
 }
+
 @media (max-width: 575px) {
   .user-dashboard-section {
     .main-title {
@@ -933,7 +1039,15 @@
       }
     }
   }
+  .factore-details {
+    ul li {
+      flex: 1 0 100%;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
 }
+
 @media (max-width: 350px) {
   .user-dashboard-section .grid-user-menu {
     width: 100%;

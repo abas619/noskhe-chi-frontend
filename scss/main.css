@@ -305,7 +305,7 @@ input[type=number] {
   font-weight: 600;
   padding: 5px 20px 5px 15px;
   height: 50px;
-  border: 1px solid #e7e6e7;
+  border: 1px solid #d2d2d2;
   border-radius: 8px;
   background: white;
   box-sizing: border-box;
@@ -414,7 +414,7 @@ input[type=number] {
 }
 .select-group .form-select {
   height: 50px;
-  border-color: #e7e6e7;
+  border-color: #d2d2d2;
   border-radius: 8px;
   transition: all 0.3s linear;
   color: #3c3c3c;
@@ -444,12 +444,11 @@ input[type=number] {
   width: 100%;
 }
 .textarea-group label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   background-color: #fff;
   color: #636063;
   margin-bottom: 5px;
-  padding-right: 15px;
 }
 .textarea-group .form-control {
   text-align: right;
@@ -1170,7 +1169,7 @@ input[type=number] {
   padding: 15px;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #e7e6e7;
+  border-bottom: 1px solid #d2d2d2;
   background-color: rgba(0, 0, 0, 0.02);
 }
 #sidebar-menu .collapse-item .card ul li:hover .name {
@@ -2184,6 +2183,10 @@ input[type=number] {
   border: none;
 }
 
+.modal-dialog {
+  margin-top: 30px;
+}
+
 .modal-header {
   justify-content: center !important;
   padding-top: 0;
@@ -2231,6 +2234,10 @@ input[type=number] {
 .modal-body .title-mini {
   text-align: center;
   margin-bottom: 15px;
+}
+.modal-body .title-mini span {
+  color: #18601f;
+  margin: 0 5px;
 }
 .modal-body .title-big {
   color: #3c3c3c;
@@ -2336,7 +2343,7 @@ input[type=number] {
 .user-dashboard-section .user-menu {
   padding: 20px 0;
   position: relative;
-  border-top: 1px solid #e7e6e7;
+  border-top: 1px solid #d2d2d2;
 }
 .user-dashboard-section .user-menu .btn-collape,
 .user-dashboard-section .user-menu .sub-btn-collape {
@@ -2421,7 +2428,7 @@ input[type=number] {
   padding: 20px;
   position: relative;
   margin-top: 0;
-  border-bottom: 1px solid #e7e6e7;
+  border-bottom: 1px solid #d2d2d2;
 }
 .user-dashboard-section .main-title::before {
   content: "";
@@ -2455,31 +2462,20 @@ input[type=number] {
   text-align: right;
 }
 .user-dashboard-section .main-title .buttons-group .btn {
-  padding: 0.4rem 1rem 0.7rem 1rem;
-  background: silver;
+  background: #f2f2f3;
+  border: 1px solid #d2d2d2;
   color: #636063;
-}
-.user-dashboard-section .main-title .buttons-group .btn.icon-right .fi {
-  margin: 0 0 0 10px;
-}
-.user-dashboard-section .main-title .buttons-group .btn.icon-left .fi {
-  margin: 0 10px 0 0;
+  min-width: unset;
 }
 .user-dashboard-section .main-title .buttons-group .btn:hover {
-  background-color: #ddd;
-}
-.user-dashboard-section .main-title .buttons-group .fi {
-  font-size: 20px;
-  line-height: 0 !important;
-  display: inline-block !important;
-  position: relative;
-  top: 6px;
-  color: #636063;
+  background: #f2f2f3 !important;
+  border-color: #18601f !important;
+  color: #18601f !important;
 }
 .user-dashboard-section .main-body {
   padding: 20px 20px 40px 20px;
 }
-.user-dashboard-section .form-content .btns-action {
+.user-dashboard-section .btns-action-main {
   text-align: center;
   margin-top: 2rem;
 }
@@ -2718,7 +2714,7 @@ input[type=number] {
   margin-bottom: 10px;
 }
 .card-notif .card-inner {
-  border: 1px solid #e7e6e7;
+  border: 1px solid #d2d2d2;
   border-radius: 15px;
   padding: 15px;
   position: relative;
@@ -2880,7 +2876,7 @@ input[type=number] {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 15px;
-  border-right: 1px solid #e7e6e7;
+  border-right: 1px solid #d2d2d2;
 }
 .card-recipe .btns-action .btn {
   padding: 0.5rem;
@@ -2889,6 +2885,106 @@ input[type=number] {
   min-width: unset;
   width: 100%;
   margin: 3px 0;
+}
+
+.drugs-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-drug {
+  margin-bottom: 5px;
+}
+.card-drug .card-inner {
+  border: 1px solid #d2d2d2;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 40px auto 300px;
+}
+.card-drug .number {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #636063;
+  padding: 8px;
+}
+.card-drug .name {
+  padding: 8px 8px 8px 12px;
+}
+.card-drug .name h6.fa {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 5px;
+}
+.card-drug .name h6.en {
+  font-size: 13px;
+  font-weight: 400;
+  color: #636063;
+  margin-bottom: 0;
+}
+.card-drug .info {
+  border-right: 1px solid #d2d2d2;
+  padding: 8px 12px 8px 8px;
+}
+.card-drug .info p {
+  margin-bottom: 0;
+  color: #636063;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-drug .info p span {
+  color: #3c3c3c;
+  font-weight: 600;
+}
+.card-drug .box {
+  border-right: 1px solid #d2d2d2;
+  padding: 8px 12px 8px 8px;
+}
+.card-drug.more-details .card-inner {
+  grid-template-columns: 40px auto 100px 300px;
+}
+
+.factore-details ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.factore-details ul li {
+  flex: 1 0 50%;
+  width: 50%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+.factore-details ul li span {
+  color: #636063;
+  margin-left: 5px;
+}
+
+.notepad {
+  margin-top: 2rem;
+}
+.notepad .notepad-inner {
+  background-color: #f2f2f3;
+  padding: 20px;
+  border-radius: 10px;
+}
+.notepad .empty-notepad {
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+.notepad .empty-notepad .fi {
+  font-size: 34px;
+  color: #9e9e9e;
+}
+.notepad .empty-notepad h6 {
+  color: #636063;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 @media (max-width: 1400px) {
@@ -2940,6 +3036,9 @@ input[type=number] {
   }
 }
 @media (max-width: 992px) {
+  .user-dashboard-section {
+    margin: 100px 0;
+  }
   .user-dashboard-section .grid-layout {
     grid-template-columns: 100%;
   }
@@ -2969,7 +3068,7 @@ input[type=number] {
     padding: 0;
   }
   .user-dashboard-section .main-title {
-    border: 1px solid #e7e6e7;
+    border: 1px solid #d2d2d2;
     border-radius: 10px 10px 0 0;
     padding: 10px 10px 10px 15px;
   }
@@ -2977,7 +3076,7 @@ input[type=number] {
     display: none;
   }
   .user-dashboard-section .main-body {
-    border: 1px solid #e7e6e7;
+    border: 1px solid #d2d2d2;
     border-top: none;
     border-radius: 0 0 10px 10px;
     padding: 15px 10px;
@@ -2993,6 +3092,26 @@ input[type=number] {
     flex: 1 0 50%;
     width: 50%;
   }
+  .card-drug .card-inner {
+    grid-template-columns: 40px auto;
+    grid-template-areas: "number name" "recipes recipes";
+  }
+  .card-drug .number {
+    grid-area: number;
+  }
+  .card-drug .name {
+    grid-area: name;
+  }
+  .card-drug .info {
+    grid-area: recipes;
+    border-right: none;
+    border-top: 1px solid #d2d2d2;
+    padding-right: 40px;
+    margin-top: 2px;
+    padding-top: 10px;
+    background-color: #f2f2f3;
+    border-radius: 0 0 10px 10px;
+  }
 }
 @media (max-width: 768px) {
   .user-dashboard-section .products-list .card-course {
@@ -3004,9 +3123,6 @@ input[type=number] {
   }
   .user-dashboard-section .main-title .buttons-group .btn {
     font-size: 13px;
-  }
-  .user-dashboard-section .main-title .buttons-group .btn.icon-left .fi {
-    margin: 0 5px 0 0;
   }
   .card-status .thumb {
     width: 70px;
@@ -3053,7 +3169,7 @@ input[type=number] {
     grid-area: btnAction;
     padding: 10px;
     border-right: none;
-    border-top: 1px solid #e7e6e7;
+    border-top: 1px solid #d2d2d2;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: row;
@@ -3172,6 +3288,11 @@ input[type=number] {
   .card-recipe .btns-action .btn {
     font-size: 13px;
   }
+  .factore-details ul li {
+    flex: 1 0 100%;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 @media (max-width: 350px) {
   .user-dashboard-section .grid-user-menu {
@@ -3186,13 +3307,13 @@ input[type=number] {
 /*#region ----------------- Tabs */
 .nav-tabs {
   border-bottom-width: 2px;
-  border-color: #e7e6e7;
+  border-color: #d2d2d2;
 }
 .nav-tabs .nav-link {
   font-size: 16px;
   font-weight: 600;
   border: none;
-  border-bottom: 2px solid #e7e6e7;
+  border-bottom: 2px solid #d2d2d2;
   color: #9e9e9e;
 }
 .nav-tabs .nav-link.active {
@@ -3209,3 +3330,22 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Tabs */
+/*#region ----------------- Tables */
+.my-table thead tr th {
+  font-size: 14px;
+  color: #636063;
+}
+.my-table tbody h6 {
+  margin: 5px 0;
+  font-weight: 400;
+}
+.my-table tbody h6.fa {
+  font-size: 15px;
+  color: #3c3c3c;
+}
+.my-table tbody h6.en {
+  color: #636063;
+  font-size: 14px;
+}
+
+/*#endregion -------------- Tables */

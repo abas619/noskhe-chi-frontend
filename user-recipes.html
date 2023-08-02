@@ -235,6 +235,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -326,7 +327,8 @@
                                         </ul>
                                     </div>
                                     <div class="btns-action">
-                                        <button class="btn btn-primary">پرداخت</button>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modal-payment">پرداخت</button>
                                     </div>
                                 </div>
                             </div>
@@ -363,8 +365,9 @@
                                         </ul>
                                     </div>
                                     <div class="btns-action">
-                                        <button class="btn btn-primary">مشاهده نسخه</button>
-                                        <button class="btn btn-secondary">جزییات</button>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modal-drugs">دستور مصرف</button>
+                                        <a href="user-recipe-details.html" class="btn btn-secondary">جزییات</a>
                                     </div>
                                 </div>
                             </div>
@@ -401,7 +404,7 @@
                                         </ul>
                                     </div>
                                     <div class="btns-action">
-                                        <button class="btn btn-primary-outline color-red">جزییات</button>
+                                        <a href="user-recipe-details.html" class="btn btn-secondary">جزییات</a>
                                     </div>
                                 </div>
                             </div>
@@ -556,78 +559,137 @@
         </div>
     </div>
 
-    <!-- Modal Login -->
-    <div class="modal fade" id="modal-signin" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Modal Drugs -->
+    <div class="modal fade" id="modal-drugs" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">ورود | ثبت نام</h1>
+                    <h1 class="modal-title">دستور مصرف</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pb-4">
-                    <!-- دریافت شماره همراه -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
+                <div class="modal-body">
+                    <div class="drugs-list">
+                        <div class="card-drug">
+                            <div class="card-inner">
+                                <div class="number">1.</div>
+                                <div class="name">
+                                    <h6 class="fa">کوریزان ® ویتامین سی</h6>
+                                    <h6 class="en">Corizan Vitamin C</h6>
+                                </div>
+                                <div class="info">
+                                    <p><span>نحوه مصرف : </span>روزی 4 عدد</p>
+                                </div>
+                            </div>
                         </div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="text" class="input" placeholder="شماره همراه" required>
-                                <label>شماره همراه</label>
-                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
+                        <div class="card-drug">
+                            <div class="card-inner">
+                                <div class="number">2.</div>
+                                <div class="name">
+                                    <h6 class="fa">قرص روکشدار كلداكس® آنفلونزا</h6>
+                                    <h6 class="en">Coldax Flu</h6>
+                                </div>
+                                <div class="info">
+                                    <p><span>نحوه مصرف : </span>هر 8 ساعت</p>
+                                </div>
                             </div>
-                            <h6 class="title-mini">سلام‌! لطفا شماره همراه خود را وارد کنید</h6>
-                            <div class="btns-action">
-                                <button class="btn btn-secondary"
-                                    onclick="changeSignModalScreen(1),startTimer('1',3)">دریافت کد</button>
-                            </div>
-                        </form>
-                        <div class="link">
-                            ورود شما به معنای پذیرش شرایط نسخه چی و <a href="#">قوانین حریم‌خصوصی</a> است
                         </div>
-                    </div>
-                    <!-- کد تایید -->
-                    <div class="login-section">
-                        <h6 class="title-mini">کد تایید را وارد کنید</h6>
-                        <div class="alert-msg error">حساب کاربری با شماره موبایل ۰۹۱214۹۸۶6۹ وجود ندارد</div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="number" class="input" placeholder="کد تایید" required>
-                                <label>کد تایید</label>
-                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
+                        <div class="card-drug">
+                            <div class="card-inner">
+                                <div class="number">3.</div>
+                                <div class="name">
+                                    <h6 class="fa">ادوالژین ای آر</h6>
+                                    <h6 class="en">Advalgin 600 mg</h6>
+                                </div>
+                                <div class="info">
+                                    <p><span>نحوه مصرف : </span>روزی 1 عدد</p>
+                                </div>
                             </div>
-                            <div class="time-countdown">
-                                <h6 class="time-show" id="timer_1">00:00</h6>
-                                <button class="btn-link btn-resend-code_1" onclick="startTimer('1',4)">ارسال
-                                    مجدد</button>
-                            </div>
-                            <div class="btns-action">
-                                <button class="btn btn-primary" onclick="changeSignModalScreen(0)">تغییر شماره
-                                    همراه</button>
-                                <button class="btn btn-secondary" onclick="changeSignModalScreen(2)">ورود</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- نمایش پیام -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
                         </div>
-                        <h4 class="title-big">به <span>نسخه‌چی</span> خوش آمدید!</h4>
-                        <div class="btns-action">
-                            <a href="#" class="btn btn-primary">ثبت نسخه جدید</a>
-                            <a href="#" class="btn btn-secondary">تکمیل مشخصات</a>
+                        <div class="card-drug">
+                            <div class="card-inner">
+                                <div class="number">4.</div>
+                                <div class="name">
+                                    <h6 class="fa">قرص کدیمال® اکسترا - بلیستر</h6>
+                                    <h6 class="en">Codimal®Extra F.C Tablet 20 Pcs</h6>
+                                </div>
+                                <div class="info">
+                                    <p><span>نحوه مصرف : </span>هر وقت دوست داشتی بنداز بالا</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="modal-footer d-none">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                    <button type="button" class="btn btn-primary">دریافت کد ورود</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">متوجه شدم</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal Payment -->
+    <div class="modal fade" id="modal-payment" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">تایید و پرداخت</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="title-mini">آیا داروهای زیر با کد رهگیری <span>48652130</span>مورد تایید شماست؟</h6>
+                    <div class="drugs-list">
+                        <table class="table my-table table-bordered table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">نام دارو</th>
+                                    <th scope="col">تعداد</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <h6 class="fa">کوریزان ® ویتامین سی</h6>
+                                        <h6 class="en">Corizan Vitamin C</h6>
+                                    </td>
+                                    <td>2 بسته</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <h6 class="fa">قرص روکشدار كلداكس® آنفلونزا</h6>
+                                        <h6 class="en">Coldax Flu</h6>
+                                    </td>
+                                    <td>3 بسته</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <h6 class="fa">ادوالژین ای آر</h6>
+                                        <h6 class="en">Advalgin 600 mg</h6>
+                                    </td>
+                                    <td>10 عدد</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>
+                                        <h6 class="fa">قرص کدیمال® اکسترا - بلیستر</h6>
+                                        <h6 class="en">Codimal®Extra F.C Tablet 20 Pcs</h6>
+                                    </td>
+                                    <td>1 بسته</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-outline" data-bs-dismiss="modal">خیر</button>
+                    <a href="payment-step-time.html" class="btn btn-primary">تایید و پرداخت</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Scripts -->
