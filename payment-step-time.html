@@ -29,16 +29,225 @@
 
     <!-- Payment Steps -->
     <div class="payment-section">
-        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
-            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
-            با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
-            و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و
-            فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها،
-            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-            دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
-            با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-            شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
-            و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را </p>
+        <div class="container">
+            <div class="section-inner">
+                <div class="steps">
+                    <div class="logo">
+                        <div class="img-inner">
+                            <a href="index.html">
+                                <img src="images/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <span class="icon"><i class="fi fi-rr-calendar"></i></span>
+                            <span class="text">زمان و ارسال</span>
+                        </li>
+                        <li class="">
+                            <span class="icon"><i class="fi fi-rr-wallet"></i></span>
+                            <span class="text">پرداخت</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- انتخاب سایر موارد -->
+                <div class="grid-layout">
+                    <div class="grid-information">
+                        <div class="grid-inner">
+                            <div class="title mt-4">
+                                <h6>روش تحویل داروها</h6>
+                            </div>
+                            <div class="delivery-section" id="delivery">
+                                <div class="card-delivery active" onclick="chooseDelivery(this)">
+                                    <div class="card-inner">
+                                        <div class="check"><i class="fi fi-rr-check"></i>
+                                        </div>
+                                        <div class="icon"><i class="fi fi-rr-biking"></i></div>
+                                        <div class="name">ارسال با پیک</div>
+                                    </div>
+                                    <div class="choose-address">
+                                        <div class="your-address">
+                                            <div class="icon">
+                                                <i class="fi fi-rr-marker"></i>
+                                            </div>
+                                            <div class="location">
+                                                <h5>پارک علم و فناوری قزوین</h5>
+                                                <h6>گیرنده : وحید حسینی اصل</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-address" data-bs-toggle="modal"
+                                        data-bs-target="#modal-chooseAddress">تغییر یا ویرایش آدرس</button>
+                                </div>
+                                <div class="card-delivery" onclick="chooseDelivery(this)">
+                                    <div class="card-inner">
+                                        <div class="check"><i class="fi fi-rr-check"></i></div>
+                                        <div class="icon"><i class="fi fi-rr-store-alt"></i></div>
+                                        <div class="name">مراجعه حضوری</div>
+                                    </div>
+                                    <div class="drugstore-address">
+                                        <h6>آدرس داروخانه :</h6>
+                                        <p>قزوین، خیام شمالی، نرسیده به جنوبی، کوچه بن بست، ته کوچه</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title mt-4">
+                                <h6>انتخاب بازه زمانی</h6>
+                            </div>
+                            <div class="calendar-section">
+                                <div class="swiper swiper-calendar">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">شنبه</h6>
+                                            <h6 class="day-number">17</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">یکشنبه</h6>
+                                            <h6 class="day-number">18</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">دوشنبه</h6>
+                                            <h6 class="day-number">19</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">سه‌شنبه</h6>
+                                            <h6 class="day-number">20</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">چهارشنبه</h6>
+                                            <h6 class="day-number">21</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">پنجشنبه</h6>
+                                            <h6 class="day-number">22</h6>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h6 class="day-name">جمعه</h6>
+                                            <h6 class="day-number">23</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper swiper-relative">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="radios-group">
+                                                <div class="radio-inner">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-11" checked>
+                                                        <label class="form-check-label" for="radio-select-time-11">
+                                                            ساعت <span>8</span> تا <span>10</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-12">
+                                                        <label class="form-check-label" for="radio-select-time-12">
+                                                            ساعت <span>10</span> تا <span>12</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-13">
+                                                        <label class="form-check-label" for="radio-select-time-13">
+                                                            ساعت <span>8</span> تا <span>10</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-14">
+                                                        <label class="form-check-label" for="radio-select-time-14">
+                                                            ساعت <span>10</span> تا <span>12</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="radios-group">
+                                                <div class="radio-inner">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-21" checked>
+                                                        <label class="form-check-label" for="radio-select-time-21">
+                                                            ساعت <span>8</span> تا <span>10</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-22">
+                                                        <label class="form-check-label" for="radio-select-time-22">
+                                                            ساعت <span>10</span> تا <span>12</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-23">
+                                                        <label class="form-check-label" for="radio-select-time-23">
+                                                            ساعت <span>8</span> تا <span>10</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="radio-selectday" id="radio-select-time-24">
+                                                        <label class="form-check-label" for="radio-select-time-24">
+                                                            ساعت <span>10</span> تا <span>12</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            دوشنبه 3
+                                        </div>
+                                        <div class="swiper-slide">
+                                            سه‌شنبه 4
+                                        </div>
+                                        <div class="swiper-slide">
+                                            چهارشنبه 5
+                                        </div>
+                                        <div class="swiper-slide">
+                                            پنجشنبه 6
+                                        </div>
+                                        <div class="swiper-slide">
+                                            جمعه 7
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary-outline btn-back icon-right"><i
+                                class="fi fi-rr-arrow-small-right"></i>بازگشت</a>
+                    </div>
+                    <div class="grid-sidebar">
+                        <div class="grid-inner">
+                            <ul>
+                                <li>
+                                    <span class="name">قیمت فاکتور :</span>
+                                    <span class="desc">480,000 <small>تومان</small></span>
+                                </li>
+                                <li>
+                                    <span class="name">تخفیف شما :</span>
+                                    <span class="desc color-red">80,000 <small>تومان</small></span>
+                                </li>
+                                <li>
+                                    <span class="name">هزینه ارسال :</span>
+                                    <span class="desc color-green">90,000 <small>تومان</small></span>
+                                </li>
+                                <li>
+                                    <span class="name">قابل پرداخت :</span>
+                                    <span class="desc">490,000 <small>تومان</small></span>
+                                </li>
+                            </ul>
+                            <div class="btns-action">
+                                <a href="payment-step-credit.html" class="btn btn-secondary icon-left"><i
+                                        class="fi fi-rr-arrow-small-left"></i>ثبت سفارش</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -145,6 +354,151 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Modal Choose Address -->
+    <div class="modal fade" id="modal-chooseAddress" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">انتخاب آدرس</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary icon-right" data-bs-toggle="modal"
+                        data-bs-target="#modal-newAddress"><i class="fi fi-rr-add"></i>آدرس جدید</button>
+                    <div class="address-list mt-4">
+                        <div class="card-address small active" onclick="chooseAddress(this)">
+                            <div class="card-inner">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <ul class="info-list">
+                                    <li><span><i class="fi fi-rr-marker"></i>آدرس :</span>لورم ایپسوم متن ساختگی با
+                                        تولید سادگی نامفهوم از صنعت چاپ، و </li>
+                                    <li><span><i class="fi fi-rr-envelope"></i>کد پستی :</span>9856321478</li>
+                                    <li><span><i class="fi fi-rr-user"></i>نام گیرنده :</span>امیرحسین پورمند</li>
+                                    <li><span><i class="fi fi-rr-phone-call"></i>شماره تماس :</span>09198563320</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-address small" onclick="chooseAddress(this)">
+                            <div class="card-inner">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <ul class="info-list">
+                                    <li><span><i class="fi fi-rr-marker"></i>آدرس :</span>لورم ایپسوم متن ساختگی با
+                                        تولید سادگی نامفهوم از صنعت چاپ، و </li>
+                                    <li><span><i class="fi fi-rr-envelope"></i>کد پستی :</span>3214684652</li>
+                                    <li><span><i class="fi fi-rr-user"></i>نام گیرنده :</span>وحید حسینی</li>
+                                    <li><span><i class="fi fi-rr-phone-call"></i>شماره تماس :</span>09369363625</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-address small" onclick="chooseAddress(this)">
+                            <div class="card-inner">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <ul class="info-list">
+                                    <li><span><i class="fi fi-rr-marker"></i>آدرس :</span>لورم ایپسوم متن ساختگی با
+                                        تولید سادگی نامفهوم از صنعت چاپ، و </li>
+                                    <li><span><i class="fi fi-rr-envelope"></i>کد پستی :</span>1200356985</li>
+                                    <li><span><i class="fi fi-rr-user"></i>نام گیرنده :</span>سجاد محمدی</li>
+                                    <li><span><i class="fi fi-rr-phone-call"></i>شماره تماس :</span>0935442035</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-outline" data-bs-dismiss="modal">خیر</button>
+                    <a href="payment-step-time.html" class="btn btn-primary">انتخاب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal New Address -->
+    <div class="modal fade" id="modal-newAddress" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">آدرس جدید</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="نام" required>
+                                    <label>نام</label>
+                                    <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="نام خانوادگی" required>
+                                    <label>نام خانوادگی</label>
+                                    <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="عنوان آدرس" required>
+                                    <label>عنوان آدرس</label>
+                                    <div class="icon"><i class="fi fi-rr-pencil"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="شماره تماس" required>
+                                    <label>شماره تماس</label>
+                                    <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="select-group">
+                                    <label>استان</label>
+                                    <select class="form-select">
+                                        <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                        <option value="1">قزوین</option>
+                                        <option value="2">اهواز</option>
+                                        <option value="2">شیراز</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="select-group">
+                                    <label>شهر</label>
+                                    <select class="form-select">
+                                        <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                        <option value="1">قزوین</option>
+                                        <option value="2">الوند</option>
+                                        <option value="3">تاکستان</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="آدرس" required>
+                                    <label>آدرس</label>
+                                    <div class="icon"><i class="fi fi-rr-marker"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="inputgroup">
+                                    <input type="number" class="input" placeholder="کد پستی" required>
+                                    <label>کد پستی</label>
+                                    <div class="icon"><i class="fi fi-rr-barcode"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer pt-0">
+                    <button type="button" class="btn btn-primary-outline" data-bs-toggle="modal"
+                        data-bs-target="#modal-chooseAddress">بازگشت</button>
+                    <button type="button" class="btn btn-primary">تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Scripts -->

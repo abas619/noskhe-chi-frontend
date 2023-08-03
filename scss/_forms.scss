@@ -232,6 +232,12 @@
     .form-check-label {
       cursor: pointer;
     }
+    .form-check-input {
+      background-color: $background;
+      &:checked {
+        background-color: $primary;
+      }
+    }
   }
 }
 /*#endregion -------------- Forms */

@@ -60,7 +60,6 @@
   background: transparent;
   color: $secondary;
   border: 2px solid $secondary;
-  padding: 0.62rem 1.2rem;
   &:hover,
   &:focus {
     background: $secondary;
@@ -77,12 +76,11 @@
 }
 .btn-secondary-outline {
   background: transparent;
-  color: $secondary;
-  border: 2px solid $secondary;
-  padding: 0.62rem 1.2rem;
+  color: $primary;
+  border: 2px solid $primary;
   &:hover,
   &:focus {
-    background-color: $secondary;
+    background-color: $primary;
     color: white;
   }
 }

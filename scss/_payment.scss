@@ -1,0 +1,463 @@
+/*#region ----------------- Payment */
+.payment-section {
+  padding: 60px 0 120px 0;
+  background: linear-gradient(180deg, white 70%, rgba(255, 255, 255, 0));
+  .steps {
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    ul {
+      @include displayFlex(flex, center, center);
+      width: 500px;
+      margin: 1rem auto 0 auto;
+      li {
+        flex: 0 0 50%;
+        width: 50%;
+        // flex: 0 0 33.33%;
+        // width: 33.33%;
+        text-align: center;
+        position: relative;
+        // z-index: 10;
+        &::before {
+          content: "";
+          position: absolute;
+          //   left: 33.3%;
+          left: 50%;
+          top: 27px;
+          width: 100%;
+          height: 2px;
+          background-color: $borderColor;
+          z-index: 0;
+        }
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+        .icon {
+          @include displayFlex(flex, center, center);
+          width: 54px;
+          height: 54px;
+          margin: 0 auto 10px auto;
+          background-color: $background;
+          color: $textGrey;
+          border-radius: 50%;
+          font-size: 24px;
+          position: relative;
+          z-index: 10;
+        }
+        .text {
+          font-size: 14px;
+          font-weight: 500;
+          color: $textGrey;
+          white-space: nowrap;
+          display: inline-block;
+          position: relative;
+          z-index: 10;
+        }
+        &.active {
+          &::before {
+            background-color: $secondary;
+          }
+          .icon {
+            background: $gradientSecondary;
+            color: white;
+          }
+          .text {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    .img-inner {
+      width: 180px;
+      margin: 0 auto 1rem auto;
+      a {
+        display: block;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .grid-layout {
+    display: grid;
+    grid-template-columns: calc(100% - 350px) 350px;
+    margin-top: 1.2rem;
+  }
+  .grid-sidebar {
+    .grid-inner {
+      border: 1px solid $borderColor;
+      padding: 15px;
+      border-radius: 20px;
+      background-color: white;
+      position: sticky;
+      top: 50px;
+    }
+    ul {
+      li {
+        @include displayFlex(flex, center, space-between);
+        padding: 10px 0;
+        border-bottom: 1px solid $borderColor;
+        &:last-child {
+          border-bottom: none;
+        }
+        .name {
+          color: $textGrey;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .desc {
+          color: $textDark;
+          font-size: 18px;
+          font-weight: 600;
+          small {
+            font-size: 13px;
+            margin-right: 2px;
+          }
+          &.color-red {
+            color: $error;
+          }
+          &.color-green {
+            color: $success;
+          }
+        }
+      }
+    }
+    .btns-action {
+      margin-top: 1rem;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+  .grid-information {
+    padding-left: 1.2rem;
+    .btn-back {
+      margin-top: 10px;
+      border: none;
+      padding: 10px 45px 10px 10px;
+      min-width: unset;
+      background-color: transparent;
+      .fi {
+        top: 9px;
+      }
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.card-delivery {
+  border: 1px solid $borderColor;
+  padding: 25px;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  .card-inner {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 60px 60px auto;
+    align-items: center;
+  }
+  .check {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $borderColor;
+    background: white;
+    @include displayFlex(flex, center, center);
+    font-size: 18px;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    .fi {
+      display: none;
+    }
+  }
+  .icon {
+    font-size: 30px;
+    line-height: 0;
+    color: $textSilver;
+  }
+  .name {
+    font-size: 18px;
+    font-weight: 600;
+    color: $textGrey;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-address {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    display: none;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+  &.active {
+    border-color: $primary;
+    .check {
+      background: $gradientPrimary;
+      border: none;
+      .fi {
+        display: block;
+      }
+    }
+    .name {
+      color: $primary;
+    }
+    .drugstore-address,
+    .choose-address {
+      display: block;
+    }
+    .btn-address {
+      display: block;
+    }
+  }
+}
+.drugstore-address {
+  margin-top: 1.2rem;
+  background-color: rgba($color: $primary, $alpha: 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  display: none;
+  h6 {
+    color: $textGrey;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.choose-address {
+  display: none;
+  margin-top: 2rem;
+  .your-address {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+    }
+    .location {
+      h5 {
+        font-size: 15px;
+        font-weight: 500;
+        color: $textDark;
+        margin-bottom: 5px;
+      }
+      h6 {
+        font-size: 15px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.swiper-calendar {
+  border: 1px solid $borderColor;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 15px 0 15px;
+  background-color: white;
+  .swiper-slide {
+    text-align: center;
+    padding: 0 5px;
+    user-select: none;
+    cursor: pointer;
+    &.swiper-slide-thumb-active {
+      .day-name {
+        color: $primary;
+      }
+      .day-number {
+        border-bottom-color: $secondary;
+        font-weight: 800;
+        color: $textDark;
+      }
+    }
+    .day-name {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .day-number {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $textGrey;
+      display: inline-block;
+      border-bottom: 4px solid transparent;
+    }
+  }
+}
+
+.swiper-relative {
+  border: 1px solid $borderColor;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  padding: 15px;
+  background-color: white;
+  .swiper-slide {
+    .form-check {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+      margin: 8px 0;
+      padding-left: 10px;
+      //   padding: 10px;
+      .form-check-input {
+        border-color: $textGrey;
+        top: 2px;
+        &:checked {
+          border-color: $primary;
+          ~ .form-check-label {
+            color: $secondary;
+            span {
+              color: $secondary;
+            }
+          }
+        }
+      }
+      .form-check-label {
+        font-size: 16px;
+        font-weight: 400;
+        color: $textGrey;
+        span {
+          font-weight: 600;
+          color: $textDark;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .payment-section {
+    .grid-layout {
+      grid-template-columns: calc(100% - 300px) 300px;
+    }
+  }
+  .swiper-relative {
+    .swiper-slide {
+      .form-check {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .payment-section {
+    padding: 50px 0 100px 0;
+    .grid-layout {
+      grid-template-columns: 100%;
+    }
+    .grid-information {
+      padding: 0 0 1.2rem 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .payment-section {
+    .logo {
+      .img-inner {
+        width: 120px;
+      }
+    }
+    .steps {
+      padding: 15px;
+      ul {
+        width: 100%;
+        li {
+          .icon {
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .card-delivery {
+    padding: 15px;
+    .card-inner {
+      grid-template-columns: 40px 35px auto;
+    }
+    .check {
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+    }
+    .icon {
+      font-size: 24px;
+    }
+    .name {
+      font-size: 16px;
+      padding-left: 140px;
+    }
+    .btn-address {
+      top: 12px;
+      font-size: 12px;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  .choose-address {
+    margin-top: 1.5rem;
+    .your-address {
+      .location {
+        h5 {
+          font-size: 14px;
+        }
+        h6 {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .drugstore-address {
+    padding: 15px;
+    h6 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .swiper-calendar {
+    .swiper-slide {
+      .day-name {
+        font-size: 14px;
+        margin-bottom: 0.3rem;
+      }
+      .day-number {
+        font-size: 17px;
+      }
+    }
+  }
+  .swiper-relative {
+    .swiper-slide {
+      .form-check {
+        .form-check-label {
+          font-size: 14px;
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- Payment */

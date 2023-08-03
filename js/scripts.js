@@ -109,3 +109,22 @@ if (document.querySelector('.user-dashboard-section') != null) {
         overlayUserMenu.classList.remove('active');
     }
 }
+
+
+// Choose Delivery
+function chooseDelivery(el) {
+    let cards_of_Delivery = document.querySelectorAll('.card-delivery');
+    let i;
+    for (i = 0; i < cards_of_Delivery.length; i++) {
+        cards_of_Delivery[i].classList.remove('active');
+    }
+    el.classList.add('active');
+}
+function chooseAddress(el) {
+    let cards_of_address = document.querySelectorAll('.card-address');
+    let i;
+    for (i = 0; i < cards_of_address.length; i++) {
+        cards_of_address[i].classList.remove('active');
+    }
+    el.classList.add('active');
+}

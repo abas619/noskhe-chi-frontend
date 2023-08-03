@@ -642,6 +642,12 @@
       }
     }
   }
+  &.have-border {
+    padding: 25px;
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+    background-color: white;
+  }
 }
 
 .notepad {
@@ -662,6 +668,104 @@
       color: $textGrey;
       font-weight: 400;
       font-size: 14px;
+    }
+  }
+}
+
+.card-address {
+  margin-bottom: 10px;
+  user-select: none;
+  position: relative;
+  .card-inner {
+    display: grid;
+    grid-template-columns: 40px auto;
+    border: 2px solid $borderColor;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+    background-color: white;
+    border: 1px solid $borderColor;
+    @include displayFlex(flex, center, center);
+    margin-top: 5px;
+  }
+  .info-list {
+    li {
+      font-size: 14px;
+      color: $textDark;
+      margin: 4px 0;
+      span {
+        color: $textGrey;
+        margin-left: 5px;
+      }
+      .fi {
+        margin-left: 5px;
+        font-size: 16px;
+        color: $textSilver;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  .dropdown {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    .btn-card-menu {
+      width: 34px;
+      height: 34px;
+      @include displayFlex(flex, center, center);
+      border-radius: 8px;
+      background-color: $background;
+      color: $textSilver;
+      border: none;
+      padding: 2px;
+      font-size: 20px;
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        font-size: 14px;
+        color: $textDark;
+        .fi {
+          color: $textSilver;
+          font-size: 18px;
+          position: relative;
+          padding-left: 10px;
+          top: 4px;
+        }
+        &:hover,
+        &:focus {
+          background: $gradientPrimary;
+          color: white;
+          .fi {
+            color: rgba($color: white, $alpha: 0.7);
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    .card-inner {
+      border-color: $primary;
+    }
+    .icon {
+      background: $gradientPrimary;
+      border: none;
+    }
+    .dropdown {
+      .btn-card-menu {
+        background-color: rgba($color: $primary, $alpha: 0.15);
+        color: $primary;
+      }
+    }
+  }
+  &.small {
+    .card-inner {
     }
   }
 }
