@@ -165,9 +165,9 @@
                                             class="fi fi-rr-clipboard-list-check"></i>لیست نسخه‌ها</a></li>
                                 <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
                                             class="fi fi-rr-marker"></i>آدرس‌ها</a></li>
-                                <li class="menu-item active"><a href="user-profile.html" class="btn-collape"><i
+                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>حساب کاربری</a></li>
-                                <li class="menu-item">
+                                <li class="menu-item active">
                                     <a href="user-tickets.html" class="btn-collape">
                                         <i class="fi fi-rr-comment-alt"></i>
                                         پیام‌های دریافتی
@@ -199,92 +199,80 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-user"></i>
+                                    <i class="fi fi-rr-comment-alt"></i>
                                 </div>
-                                <h3>حساب کاربری</h3>
+                                <h3>پیام‌های دریافتی</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <button href="user-recipes.html" class="btn btn-primary btn-fill icon-right"
+                                    data-bs-toggle="modal" data-bs-target="#modal-sendMessage">پیام
+                                    جدید<i class="fi fi-rr-add"></i></button>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="form-content">
-                                <form action="">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="نام" required>
-                                                <label>نام</label>
-                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="نام خانوادگی" required>
-                                                <label>نام خانوادگی</label>
-                                                <div class="icon"><i class="fi fi-rr-pencil"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>جنسیت</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">زن</option>
-                                                    <option value="2">مرد</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="text" class="input" placeholder="شماره همراه" required>
-                                                <label>شماره همراه</label>
-                                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>استان</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">قزوین</option>
-                                                    <option value="2">اهواز</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="select-group">
-                                                <label>شهر</label>
-                                                <select class="form-select">
-                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
-                                                    <option value="1">الوند</option>
-                                                    <option value="2">تاکستان</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="number" class="input" placeholder="کد ملی" required>
-                                                <label>کد ملی</label>
-                                                <div class="icon"><i class="fi fi-rr-subtitles"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <div class="inputgroup">
-                                                <input type="email" class="input" placeholder="آدرس ایمیل" required>
-                                                <label>آدرس ایمیل</label>
-                                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="btns-action-main">
-                                                <a href="#" class="btn btn-primary">تایید</a>
-                                                <a href="#" class="btn btn-primary-outline">انصراف</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <!-- وقتی برای اولین بار میخواد ادرس ثبت کنه و خالیه -->
+                            <div class="empty-box">
+                                <div class="thumb">
+                                    <img src="images/icons/icon-status-message.svg" alt="img">
+                                </div>
+                                <h6>شما پیامی دریافت نکرده اید</h6>
+                                <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                    data-bs-target="#modal-sendMessage"><i class="fi fi-rr-add"></i>پیام جدید</button>
                             </div>
+
+                            <!-- وقتی پیامی دریافت کرد -->
+                            <div class="comment">
+                                <div class="comment-inner">
+                                    <div class="info">
+                                        <div class="subject">عنوان پیام</div>
+                                        <span class="date">21 اسفند 1401</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                            سطرآنچنان که
+                                            لازم است، و برای شرایط </p>
+                                    </div>
+                                    <div class="comment reply">
+                                        <div class="comment-inner">
+                                            <div class="info">
+                                                <div class="subject">مدیر سایت</div>
+                                                <span class="date">22 اسفند 1401</span>
+                                            </div>
+                                            <div class="description">
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                                                    با
+                                                    استفاده از طراحان گرافیک است، چاپگرها و متون بلکه </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="satus info"><span>در حال بررسی</span></div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="comment-inner">
+                                    <div class="info">
+                                        <div class="subject">عنوان پیام</div>
+                                        <span class="date">21 اسفند 1401</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                            سطرآنچنان که
+                                            لازم است، و برای شرایط </p>
+                                    </div>
+                                    <div class="satus success"><span>در حال بررسی</span></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -395,75 +383,38 @@
         </div>
     </footer>
 
-
-    <!-- Modal Login -->
-    <div class="modal fade" id="modal-signin" tabindex="-1">
+    <!-- Modal Send Message -->
+    <div class="modal fade" id="modal-sendMessage" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">ورود | ثبت نام</h1>
+                    <h1 class="modal-title">پیام جدید</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pb-4">
-                    <!-- دریافت شماره همراه -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
+                <div class="modal-body">
+                    <form action="" class="form-content">
+                        <div class="inputgroup">
+                            <input type="number" class="input" placeholder="عنوان پیام" required>
+                            <label>عنوان پیام</label>
+                            <div class="icon"><i class="fi fi-rr-subtitles"></i></div>
                         </div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="text" class="input" placeholder="شماره همراه" required>
-                                <label>شماره همراه</label>
-                                <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
-                            </div>
-                            <h6 class="title-mini">سلام‌! لطفا شماره همراه خود را وارد کنید</h6>
-                            <div class="btns-action">
-                                <button class="btn btn-secondary"
-                                    onclick="changeSignModalScreen(1),startTimer('1',3)">دریافت کد</button>
-                            </div>
-                        </form>
-                        <div class="link">
-                            ورود شما به معنای پذیرش شرایط نسخه چی و <a href="#">قوانین حریم‌خصوصی</a> است
+                        <div class="select-group">
+                            <label>موضوع</label>
+                            <select class="form-select">
+                                <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                <option value="1">تماس با مدیریت</option>
+                                <option value="2">پشتیبانی</option>
+                            </select>
                         </div>
-                    </div>
-                    <!-- کد تایید -->
-                    <div class="login-section">
-                        <h6 class="title-mini">کد تایید را وارد کنید</h6>
-                        <div class="alert-msg error">حساب کاربری با شماره موبایل ۰۹۱214۹۸۶6۹ وجود ندارد</div>
-                        <form action="" class="form-content">
-                            <div class="inputgroup">
-                                <input type="number" class="input" placeholder="کد تایید" required>
-                                <label>کد تایید</label>
-                                <div class="icon"><i class="fi fi-rr-envelope"></i></div>
-                            </div>
-                            <div class="time-countdown">
-                                <h6 class="time-show" id="timer_1">00:00</h6>
-                                <button class="btn-link btn-resend-code_1" onclick="startTimer('1',4)">ارسال
-                                    مجدد</button>
-                            </div>
-                            <div class="btns-action">
-                                <button class="btn btn-primary" onclick="changeSignModalScreen(0)">تغییر شماره
-                                    همراه</button>
-                                <button class="btn btn-secondary" onclick="changeSignModalScreen(2)">ورود</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- نمایش پیام -->
-                    <div class="login-section">
-                        <div class="login-logo">
-                            <img src="images/logo.svg" alt="">
+                        <div class="textarea-group">
+                            <label>پیام شما</label>
+                            <textarea class="form-control" cols="30" rows="4"></textarea>
                         </div>
-                        <h4 class="title-big">به <span>نسخه‌چی</span> خوش آمدید!</h4>
-                        <div class="btns-action">
-                            <a href="#" class="btn btn-primary">ثبت نسخه جدید</a>
-                            <a href="#" class="btn btn-secondary">تکمیل مشخصات</a>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
-                <div class="modal-footer d-none">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                    <button type="button" class="btn btn-primary">دریافت کد ورود</button>
+                    <button type="button" class="btn btn-primary">ارسال پیام</button>
                 </div>
             </div>
         </div>

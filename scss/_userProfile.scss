@@ -162,7 +162,7 @@
       text-align: right;
     }
     .buttons-group {
-      .btn {
+      .btn-primary {
         background: $background;
         border: 1px solid $borderColor;
         color: $textGrey;
@@ -170,7 +170,17 @@
         &:hover {
           background: $background !important;
           border-color: $primary !important;
-          color: $primary !important;
+          color: $primary;
+        }
+        &.btn-fill {
+          background: $primary;
+          color: white;
+          border: none;
+          &:hover,
+          &:focus {
+            background: $primaryLight !important;
+            color: white;
+          }
         }
       }
     }
@@ -195,7 +205,7 @@
     h6 {
       color: $textGrey;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 }

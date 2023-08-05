@@ -2465,16 +2465,25 @@ input[type=number] {
   margin-right: 20px;
   text-align: right;
 }
-.user-dashboard-section .main-title .buttons-group .btn {
+.user-dashboard-section .main-title .buttons-group .btn-primary {
   background: #f2f2f3;
   border: 1px solid #d2d2d2;
   color: #636063;
   min-width: unset;
 }
-.user-dashboard-section .main-title .buttons-group .btn:hover {
+.user-dashboard-section .main-title .buttons-group .btn-primary:hover {
   background: #f2f2f3 !important;
   border-color: #18601f !important;
-  color: #18601f !important;
+  color: #18601f;
+}
+.user-dashboard-section .main-title .buttons-group .btn-primary.btn-fill {
+  background: #18601f;
+  color: white;
+  border: none;
+}
+.user-dashboard-section .main-title .buttons-group .btn-primary.btn-fill:hover, .user-dashboard-section .main-title .buttons-group .btn-primary.btn-fill:focus {
+  background: #5e8f63 !important;
+  color: white;
 }
 .user-dashboard-section .main-body {
   padding: 20px 20px 40px 20px;
@@ -2497,7 +2506,7 @@ input[type=number] {
 .user-dashboard-section .empty-box h6 {
   color: #636063;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .btn-usermenu {
@@ -3877,3 +3886,60 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Payment */
+.comment {
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.comment .info {
+  margin-bottom: 10px;
+}
+.comment .info .subject {
+  font-size: 16px;
+  font-weight: 600;
+  color: #636063;
+  margin-bottom: 5px;
+}
+.comment .info .date {
+  color: #9e9e9e;
+}
+.comment .description p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+.comment.reply {
+  border-color: #18601f;
+  border-right-width: 4px;
+  background-color: rgba(24, 96, 31, 0.1);
+  margin-bottom: 0;
+}
+.comment .satus {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+.comment .satus span {
+  border-radius: 8px;
+  margin-right: auto;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.comment .satus.waiting span {
+  background-color: rgba(255, 225, 106, 0.3);
+  color: #3c3c3c;
+}
+.comment .satus.success span {
+  background-color: rgba(0, 189, 121, 0.1);
+  color: #00bd79;
+}
+.comment .satus.error span {
+  background-color: rgba(255, 51, 51, 0.1);
+  color: #ff3333;
+}
+.comment .satus.info span {
+  background-color: rgba(0, 156, 242, 0.1);
+  color: #009cf2;
+}
