@@ -1,6 +1,6 @@
 /*#region ----------------- User Profile */
 .user-dashboard-section {
-  margin: 150px 0 200px 0;
+  margin: 150px 0;
   .grid-layout {
     display: grid;
     grid-template-columns: 320px auto;
@@ -794,7 +794,7 @@
 
 @media (max-width: 1199px) {
   .user-dashboard-section {
-    margin: 120px 0 150px 0;
+    margin: 120px 0;
     .grid-layout {
       grid-template-columns: 280px auto;
     }

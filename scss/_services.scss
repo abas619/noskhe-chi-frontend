@@ -19,6 +19,20 @@
       user-select: none;
     }
   }
+  .curve-img-up {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -2px;
+    pointer-events: none;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      user-select: none;
+    }
+  }
 }
 
 .card-service {

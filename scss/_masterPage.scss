@@ -1,0 +1,19 @@
+/*#region ----------------- Master Page */
+.masterPage-section {
+  padding: 100px 0;
+  position: relative;
+  &.bg-white {
+    background-color: white;
+  }
+  .section-inner {
+  }
+  .description {
+    p {
+      text-align: justify;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*#endregion -------------- Master Page */
