@@ -1,93 +1,4 @@
-/*#region ----------------- Blog Styles */
-.blogs-home-section {
-  padding: 150px 0 100px 0;
-  position: relative;
-  .section-inner {
-    margin-top: 2rem;
-    position: relative;
-  }
-  .curve-img-up {
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: -2px;
-    pointer-events: none;
-    z-index: 1;
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      user-select: none;
-    }
-  }
-}
-.swiper-blogs-home {
-  position: unset !important;
-  .swiper-wrapper {
-    padding: 20px 0 40px 0;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    background: $gradientPrimary;
-    box-shadow: $boxshadow;
-    border-radius: 50%;
-    &::after {
-      font-size: 20px;
-      color: white;
-    }
-  }
-  .swiper-button-next {
-    left: -15px;
-  }
-  .swiper-button-prev {
-    right: -15px;
-  }
-}
-.card-blog {
-  padding: 0 10px;
-  .card-inner {
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: $boxshadow;
-    padding: 10px;
-  }
-  .thumb {
-    @include imgContainer(220px, 20px);
-  }
-  .info {
-    margin-top: 10px;
-    h4 {
-      font-size: 16px;
-      font-weight: 800;
-      color: $textDark;
-    }
-    p {
-      @include textTruncate(2);
-      font-size: 14px;
-      color: $textGrey;
-      text-align: justify;
-      min-height: 50px;
-    }
-  }
-  .c-footer {
-    @include displayFlex(flex, center, space-between);
-    margin-top: 1rem;
-    .date {
-      font-size: 13px;
-      color: $textGrey;
-      .fi {
-        margin-left: 5px;
-        color: $textSilver;
-        font-size: 15px;
-        position: relative;
-        top: 3px;
-      }
-    }
-  }
-}
-
+/*#region ----------------- Blogs */
 .blogs-grid-section {
   margin: 80px 0;
   .section-inner {
@@ -103,7 +14,7 @@
       padding: 20px;
       background-color: white;
       border: 1px solid $borderColor;
-      border-radius: 15px;
+      border-radius: 5px;
     }
   }
   .grid-news-preview {
@@ -116,131 +27,131 @@
   }
 }
 
-// .swiper-blog-preview {
-//   .swiper-wrapper {
-//     padding-bottom: 60px;
-//   }
-//   .swiper-pagination {
-//     display: inline-block;
-//     width: unset;
-//     bottom: 5px;
-//   }
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     width: 34px;
-//     height: 34px;
-//     background-color: $primary;
-//     border-radius: 50%;
-//     &::after {
-//       color: white;
-//       font-family: $iconFontRegular;
-//       font-size: 20px;
-//     }
-//   }
-//   .swiper-button-prev {
-//     bottom: 0;
-//     top: unset;
-//     right: 0;
-//     &::after {
-//       content: "\f169";
-//     }
-//   }
-//   .swiper-button-next {
-//     left: unset;
-//     right: 45px;
-//     bottom: 0;
-//     top: unset;
-//     &::after {
-//       content: "\f168";
-//     }
-//   }
-// }
+.swiper-blog-preview {
+  .swiper-wrapper {
+    padding-bottom: 60px;
+  }
+  .swiper-pagination {
+    display: inline-block;
+    width: unset;
+    bottom: 5px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 34px;
+    height: 34px;
+    background-color: $primary;
+    border-radius: 50%;
+    &::after {
+      color: white;
+      font-family: $iconFontRegular;
+      font-size: 20px;
+    }
+  }
+  .swiper-button-prev {
+    bottom: 0;
+    top: unset;
+    right: 0;
+    &::after {
+      content: "\f169";
+    }
+  }
+  .swiper-button-next {
+    left: unset;
+    right: 45px;
+    bottom: 0;
+    top: unset;
+    &::after {
+      content: "\f168";
+    }
+  }
+}
 
-// .card-blog-preview {
-//   .card-inner {
-//     display: block;
-//     background-color: white;
-//   }
-//   .thumb {
-//     @include imgContainer(370px, 5px);
-//   }
-//   .title {
-//     position: absolute;
-//     bottom: 0;
-//     right: 0;
-//     width: 100%;
-//     height: 50%;
-//     background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-//     padding: 20px;
-//     @include displayFlex(flex, flex-start, flex-end);
-//     flex-direction: column;
-//     h2 {
-//       margin-bottom: 8px;
-//       font-size: 16px;
-//       font-weight: 600;
-//       a {
-//         color: white;
-//         @include textTruncate(1);
-//         &:hover {
-//           color: $primary;
-//         }
-//       }
-//     }
-//     .date {
-//       font-size: 13px;
-//       font-weight: 400;
-//       color: white;
-//       .fi {
-//         margin-left: 10px;
-//         font-size: 16px;
-//         position: relative;
-//         top: 3px;
-//         color: rgba($color: white, $alpha: 0.7);
-//       }
-//     }
-//   }
-//   .info {
-//     margin-top: 15px;
-//     padding: 0 5px;
-//     p {
-//       text-align: justify;
-//       font-size: 14px;
-//       font-weight: 400;
-//       line-height: 24px;
-//       margin-bottom: 15px;
-//       color: $textDark;
-//       @include textTruncate(2);
-//       min-height: 48px;
-//     }
-//   }
-//   .category {
-//     @include displayFlex(flex, center, space-between);
-//     .category-link {
-//       font-size: 13px;
-//       font-weight: 400;
-//       color: $primary;
-//       .fi {
-//         margin-left: 5px;
-//         font-size: 16px;
-//         position: relative;
-//         top: 3px;
-//       }
-//       &:hover {
-//         color: $secondary;
-//       }
-//     }
-//     .btn-primary-outline {
-//       font-size: 13px;
-//       padding: 0.5rem 1rem;
-//       min-width: unset;
-//       display: flex;
-//       align-items: center;
-//       .fi {
-//         top: 0;
-//       }
-//     }
-//   }
-// }
+.card-blog-preview {
+  .card-inner {
+    display: block;
+    background-color: white;
+  }
+  .thumb {
+    @include imgContainer(370px, 5px);
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    padding: 20px;
+    @include displayFlex(flex, flex-start, flex-end);
+    flex-direction: column;
+    h2 {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      a {
+        color: white;
+        @include textTruncate(1);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    .date {
+      font-size: 13px;
+      font-weight: 400;
+      color: white;
+      .fi {
+        margin-left: 10px;
+        font-size: 16px;
+        position: relative;
+        top: 3px;
+        color: rgba($color: white, $alpha: 0.7);
+      }
+    }
+  }
+  .info {
+    margin-top: 15px;
+    padding: 0 5px;
+    p {
+      text-align: justify;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 15px;
+      color: $textDark;
+      @include textTruncate(2);
+      min-height: 48px;
+    }
+  }
+  .category {
+    @include displayFlex(flex, center, space-between);
+    .category-link {
+      font-size: 13px;
+      font-weight: 400;
+      color: $primary;
+      .fi {
+        margin-left: 5px;
+        font-size: 16px;
+        position: relative;
+        top: 3px;
+      }
+      &:hover {
+        color: $secondary;
+      }
+    }
+    .btn-primary-outline {
+      font-size: 13px;
+      padding: 0.5rem 1rem;
+      min-width: unset;
+      display: flex;
+      align-items: center;
+      .fi {
+        top: 0;
+      }
+    }
+  }
+}
 
 .card-blog-row-small {
   margin-bottom: 10px;
@@ -325,7 +236,7 @@
   article {
     padding: 5px;
     .thumb {
-      @include imgContainer(220px, 15px);
+      @include imgContainer(220px, 2px);
       .img-inner {
         img {
           transition: all 3s ease-in-out;
@@ -367,7 +278,7 @@
         font-size: 13px;
         font-weight: 400;
         color: white;
-        margin-top: 5px;
+        margin-bottom: 5px;
         .fi {
           margin-left: 5px;
           position: relative;
@@ -390,9 +301,6 @@
 .blogs-list-section {
   padding: 20px 0 100px 0;
   position: relative;
-  &.blog-details {
-    margin-top: 110px;
-  }
   .section-inner {
     display: grid;
     grid-template-columns: auto 340px;
@@ -414,15 +322,13 @@
   .articles-side {
     background-color: white;
     margin-bottom: 15px;
-    border-radius: 12px;
     .title {
       font-size: 17px;
       position: relative;
       margin-bottom: 1rem;
-      background: $gradientPrimary;
+      background-color: $primary;
       color: white;
-      padding: 10px 15px;
-      border-radius: 12px 12px 0 0;
+      padding: 8px 15px;
     }
     ul {
       padding: 0 15px 20px 15px;
@@ -467,10 +373,9 @@
     transition: all 0.2s ease-in-out;
     position: relative;
     padding: 10px;
-    border-radius: 12px;
   }
   .thumb {
-    @include imgContainer(160px, 10px);
+    @include imgContainer(160px, 2px);
     &:hover {
       img {
         transform: scale(1.03);
@@ -479,20 +384,19 @@
   }
   .date {
     position: absolute;
-    background-color: $secondary;
+    background-color: white;
     right: 20px;
     bottom: -5px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 300;
     padding: 6px 10px;
     box-shadow: $boxshadow;
-    color: white;
-    border-radius: 10px;
+    color: $textDark;
     .fi {
-      color: rgba($color: white, $alpha: 0.8);
+      color: $textSilver;
       margin-left: 5px;
       position: relative;
-      top: 3px;
+      top: 2px;
       font-size: 15px;
     }
   }
@@ -556,7 +460,7 @@
     grid-template-columns: 90px auto;
   }
   .thumb {
-    @include imgContainer(90px, 8px);
+    @include imgContainer(90px, 0);
   }
   .info {
     padding: 5px 10px 0 0;
@@ -577,7 +481,6 @@
 .blogs-details-section {
   background-color: white;
   padding: 30px;
-  border-radius: 12px;
   .name {
     margin-bottom: 1rem;
     h2 {
@@ -608,7 +511,7 @@
     }
   }
   .thumb {
-    @include imgContainer(400px, 12px);
+    @include imgContainer(400px, 0);
   }
   .description {
     margin-top: 2rem;
@@ -617,13 +520,11 @@
       padding: 15px;
       border-right: 4px solid $primary;
       margin-bottom: 1rem;
-      border-radius: 10px;
       h6 {
         font-size: 15px;
         line-height: 26px;
         margin-bottom: 0;
         text-align: justify;
-        color: $primary;
       }
     }
     p {
@@ -655,18 +556,8 @@
 }
 
 @media (max-width: 1400px) {
-  .card-blog {
-    .thumb {
-      height: 180px;
-    }
-  }
 }
 @media (max-width: 1199px) {
-  .card-blog {
-    .thumb {
-      height: 200px;
-    }
-  }
   .blogs-grid-section {
     .grid-news-preview,
     .grid-news-row {
@@ -678,57 +569,57 @@
       padding-left: 20px;
     }
   }
-  // .swiper-blog-preview {
-  //   .swiper-wrapper {
-  //     padding-bottom: 40px;
-  //   }
-  //   .swiper-button-next,
-  //   .swiper-button-prev {
-  //     width: 24px;
-  //     height: 24px;
-  //   }
-  //   .swiper-button-next {
-  //     right: 35px;
-  //   }
-  //   .swiper-pagination {
-  //     bottom: 0;
-  //   }
-  // }
-  // .card-blog-preview {
-  //   .thumb {
-  //     height: 270px;
-  //   }
-  //   .title {
-  //     h2 {
-  //       font-size: 14px;
-  //     }
-  //     .date {
-  //       font-size: 12px;
-  //       .fi {
-  //         font-size: 14px;
-  //       }
-  //     }
-  //   }
-  //   .info {
-  //     p {
-  //       font-size: 13px;
-  //       line-height: 20px;
-  //       min-height: 40px;
-  //     }
-  //   }
-  //   .category {
-  //     .category-link {
-  //       font-size: 12px;
-  //       .fi {
-  //         font-size: 14px;
-  //       }
-  //     }
-  //     .btn-primary-outline {
-  //       font-size: 12px;
-  //       padding: 0.3rem 0.8rem;
-  //     }
-  //   }
-  // }
+  .swiper-blog-preview {
+    .swiper-wrapper {
+      padding-bottom: 40px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 24px;
+      height: 24px;
+    }
+    .swiper-button-next {
+      right: 35px;
+    }
+    .swiper-pagination {
+      bottom: 0;
+    }
+  }
+  .card-blog-preview {
+    .thumb {
+      height: 270px;
+    }
+    .title {
+      h2 {
+        font-size: 14px;
+      }
+      .date {
+        font-size: 12px;
+        .fi {
+          font-size: 14px;
+        }
+      }
+    }
+    .info {
+      p {
+        font-size: 13px;
+        line-height: 20px;
+        min-height: 40px;
+      }
+    }
+    .category {
+      .category-link {
+        font-size: 12px;
+        .fi {
+          font-size: 14px;
+        }
+      }
+      .btn-primary-outline {
+        font-size: 12px;
+        padding: 0.3rem 0.8rem;
+      }
+    }
+  }
   .card-blog-row-small {
     .card-inner {
       grid-template-columns: 70px auto;
@@ -793,9 +684,6 @@
   }
 }
 @media (max-width: 992px) {
-  .blogs-home-section {
-    padding: 100px 0;
-  }
   .blogs-grid-section {
     .grid-layout {
       grid-template-columns: 100%;
@@ -860,23 +748,7 @@
   }
 }
 @media (max-width: 768px) {
-  .swiper-blogs-home {
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 30px;
-      height: 30px;
-      &::after {
-        font-size: 18px;
-      }
-    }
-  }
-  .card-blog {
-    .thumb {
-      height: 180px;
-    }
-  }
   .blogs-list-grid-layout {
-    margin-top: 110px;
     article {
       .text-content {
         h2 {
@@ -919,71 +791,49 @@
   }
 }
 @media (max-width: 575px) {
-  .swiper-blogs-home {
-    .swiper-wrapper {
-      padding-bottom: 60px;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      bottom: 0;
-      top: unset;
-    }
-    .swiper-button-next {
-      left: calc(50% - 38px);
-    }
-    .swiper-button-prev {
-      right: calc(50% - 38px);
-    }
-  }
-  .card-blog {
-    padding: 0 5px;
+  .card-blog-preview {
     .thumb {
-      height: 150px;
+      height: 220px;
+    }
+    .title {
+      h2 {
+        font-size: 13px;
+      }
+      .date {
+        font-size: 11px;
+        .fi {
+          font-size: 13px;
+        }
+      }
+    }
+    .info {
+      p {
+        font-size: 12px;
+        line-height: 18px;
+        min-height: 37px;
+      }
+    }
+    .category {
+      flex-direction: column;
+      .category-link {
+        font-size: 12px;
+        flex: 1 0 100%;
+        width: 100%;
+        margin-bottom: 8px;
+        .fi {
+          font-size: 13px;
+        }
+      }
+      .btn-primary-outline {
+        font-size: 12px;
+        width: 100%;
+        flex: 1 0 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 0.3rem 0.8rem;
+      }
     }
   }
-  // .card-blog-preview {
-  //   .thumb {
-  //     height: 220px;
-  //   }
-  //   .title {
-  //     h2 {
-  //       font-size: 13px;
-  //     }
-  //     .date {
-  //       font-size: 11px;
-  //       .fi {
-  //         font-size: 13px;
-  //       }
-  //     }
-  //   }
-  //   .info {
-  //     p {
-  //       font-size: 12px;
-  //       line-height: 18px;
-  //       min-height: 37px;
-  //     }
-  //   }
-  //   .category {
-  //     flex-direction: column;
-  //     .category-link {
-  //       font-size: 12px;
-  //       flex: 1 0 100%;
-  //       width: 100%;
-  //       margin-bottom: 8px;
-  //       .fi {
-  //         font-size: 13px;
-  //       }
-  //     }
-  //     .btn-primary-outline {
-  //       font-size: 12px;
-  //       width: 100%;
-  //       flex: 1 0 100%;
-  //       text-align: center;
-  //       justify-content: center;
-  //       padding: 0.3rem 0.8rem;
-  //     }
-  //   }
-  // }
   .blogs-list-grid-layout {
     .grid-layout {
       grid-template-columns: 100%;
@@ -1024,12 +874,4 @@
     padding: 15px;
   }
 }
-@media (max-width: 480px) {
-  .card-blog {
-    .thumb {
-      height: 180px;
-    }
-  }
-}
-
-/*#endregion -------------- Blog Styles */
+/*#endregion -------------- Blogs */
