@@ -4997,7 +4997,79 @@ input[type=number] {
 .masterPage-section .description p:last-child {
   margin-bottom: 0;
 }
+.masterPage-section .socials-information .icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.masterPage-section .socials-information .icons li {
+  margin: 5px 0 5px 10px;
+}
+.masterPage-section .socials-information .icons li a {
+  width: 48px;
+  height: 48px;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(0deg, #18601f, #5e8f63);
+  color: white;
+  font-size: 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masterPage-section .socials-information .icons li a:hover {
+  border-radius: 50%;
+}
+.masterPage-section .socials-information .address {
+  margin-top: 2.5rem;
+}
+.masterPage-section .socials-information .address li {
+  color: #3c3c3c;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  background-color: #f2f2f3;
+  padding: 12px;
+  border-radius: 8px;
+}
+.masterPage-section .socials-information .address li span {
+  color: #636063;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.masterPage-section .socials-information .address li .fi {
+  font-size: 22px;
+  margin-left: 10px;
+  position: relative;
+  top: 4px;
+}
 
+.contact-us-form {
+  border: 1px solid #d2d2d2;
+  padding: 30px;
+  border-radius: 20px;
+}
+.contact-us-form h6 {
+  margin-bottom: 2rem;
+}
+.contact-us-form .btns-group {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .masterPage-section .socials-information .icons {
+    justify-content: center;
+  }
+  .masterPage-section .socials-information .icons li {
+    margin: 5px;
+  }
+  .contact-us-form {
+    margin-bottom: 2rem;
+    padding: 20px;
+  }
+}
 /*#endregion -------------- Master Page */
 /*#region ----------------- Pagination */
 .my-pagination {

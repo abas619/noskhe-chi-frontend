@@ -15,5 +15,79 @@
       }
     }
   }
+  .socials-information {
+    .icons {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        margin: 5px 0 5px 10px;
+        a {
+          width: 48px;
+          height: 48px;
+          transition: all 0.2s ease-in-out;
+          background: $gradientPrimary;
+          color: white;
+          font-size: 22px;
+          border-radius: 20px;
+          @include displayFlex(flex, center, center);
+          &:hover {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .address {
+      margin-top: 2.5rem;
+      li {
+        color: $textDark;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+        background-color: $background;
+        padding: 12px;
+        border-radius: 8px;
+        span {
+          color: $textGrey;
+          margin-left: 5px;
+          font-weight: 500;
+        }
+        .fi {
+          font-size: 22px;
+          margin-left: 10px;
+          position: relative;
+          top: 4px;
+        }
+      }
+    }
+  }
+}
+.contact-us-form {
+  border: 1px solid $borderColor;
+  padding: 30px;
+  border-radius: 20px;
+  h6 {
+    margin-bottom: 2rem;
+  }
+  .btns-group {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .masterPage-section {
+    .socials-information {
+      .icons {
+        justify-content: center;
+        li {
+          margin: 5px;
+        }
+      }
+    }
+  }
+  .contact-us-form {
+    margin-bottom: 2rem;
+    padding: 20px;
+  }
 }
 /*#endregion -------------- Master Page */
