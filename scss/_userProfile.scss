@@ -780,6 +780,74 @@
   }
 }
 
+.card-ticket {
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  .info {
+    margin-bottom: 10px;
+    .subject {
+      font-size: 16px;
+      font-weight: 600;
+      color: $textGrey;
+      margin-bottom: 5px;
+    }
+    .date {
+      color: $textSilver;
+    }
+  }
+  .description {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textDark;
+    }
+  }
+  &.reply {
+    border-color: $primary;
+    border-right-width: 4px;
+    background-color: rgba($color: $primary, $alpha: 0.1);
+    margin-bottom: 0;
+  }
+  .satus {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    span {
+      border-radius: 8px;
+      margin-right: auto;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+    &.waiting {
+      span {
+        background-color: rgba($color: $warning, $alpha: 0.3);
+        color: $textDark;
+      }
+    }
+    &.success {
+      span {
+        background-color: rgba($color: $success, $alpha: 0.1);
+        color: $success;
+      }
+    }
+    &.error {
+      span {
+        background-color: rgba($color: $error, $alpha: 0.1);
+        color: $error;
+      }
+    }
+    &.info {
+      span {
+        background-color: rgba($color: $info, $alpha: 0.1);
+        color: $info;
+      }
+    }
+  }
+}
+
 @media (max-width: 1400px) {
   .user-dashboard-section {
     .products-list {
